@@ -1,0 +1,5 @@
+
+HEXBot is an agentic AI chatbot.
+It uses LangGraph for workflow orchestration.
+It uses Ollama for local language models.
+It uses RAG to retrieve information from local documents.

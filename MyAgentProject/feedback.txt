@@ -1,0 +1,17 @@
+Date     : 22-07-2026 11:39:10
+Name     : Alex
+Rating   : 3/5 ⭐
+Feedback : Test is nice
+------------------------------------------------------------
+Date     : 22-07-2026 11:42:05
+Name     : Faaz
+Rating   : 4/5 ⭐
+Feedback : Quiz is Amazing...
+------------------------------------------------------------
+Name: Alex
+Email: a@a.com
+Subject: Hi
+Message: Nice Product
+Share: Nice
+Rating: Very Satisfied
+----------------------------------------

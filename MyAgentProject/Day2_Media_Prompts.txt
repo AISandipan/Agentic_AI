@@ -1,0 +1,374 @@
+Absolutely. Based on the reference image, the visual language is **premium futuristic newsroom \+ broadcast technology \+ blue/cyan neon \+ cinematic data visualization**. Here are 5 reusable **master prompts** for creating animated broadcast video clips.
+
+ ### 1\. MASTER PROMPT — “The Future Newsroom Opens”
+
+ > **Create a premium cinematic broadcast-newsroom animation inspired by a futuristic media operations center.** Begin with a dark high-tech newsroom filled with massive LED video walls, live satellite feeds, journalists, editing stations, cameras and glowing data interfaces. The camera slowly pushes forward through the newsroom as hundreds of screens activate sequentially. Elegant cyan and electric-blue light trails travel through the environment, connecting cameras, servers, editors and broadcast screens. Transition into a sophisticated animated workflow showing **ACQUIRE → MANAGE → DISCOVER → CREATE → COLLABORATE → ENRICH → DELIVER → PROTECT** as illuminated stages connected by flowing digital energy. Use sleek glass panels, metallic surfaces, subtle reflections, volumetric light, realistic newsroom equipment and premium corporate broadcast graphics. Finish with a dramatic central media platform appearing in the center of the screen, surrounded by flowing data streams. **16:9, 4K, cinematic broadcast commercial, photorealistic, smooth camera movement, sophisticated motion graphics, deep navy background, cyan/blue neon accents, high contrast, elegant, authoritative, no cartoon styling.**
+
+---
+
+ ### 2\. MASTER PROMPT — “Breaking News From Field to Screen”
+
+ > **Create a dynamic 30-second futuristic broadcast animation showing how breaking news travels from the field to millions of screens.** Start with a satellite/news-gathering camera capturing live footage in a city environment. A glowing digital signal travels from the camera into a futuristic media server. Transition through multiple stages: **LIVE ACQUISITION → MEDIA INGEST → METADATA → EDITING → COLLABORATION → GRAPHICS → BROADCAST → MULTI-SCREEN DELIVERY**. Show video thumbnails, metadata cards, timestamps, captions and approval indicators moving through a sophisticated digital workflow. Use animated cyan data lines connecting every stage. The camera smoothly travels through each technological layer with seamless transitions. End with the finished news story appearing simultaneously on a giant newsroom wall, television screen, laptop, tablet and smartphone. **Premium global-news-network aesthetic, cinematic lighting, dark blue newsroom, glowing cyan interfaces, realistic broadcast equipment, elegant typography, subtle lens flares, realistic reflections, 4K, 16:9, fluid motion, polished corporate technology advertisement.**
+
+---
+
+ ### 3\. MASTER PROMPT — “One Story, Every Screen”
+
+ > **Create an inspirational cinematic broadcast technology sequence demonstrating “One Story, Multiple Screens.”** Open on a single piece of video footage floating inside a futuristic digital media environment. The footage duplicates into multiple synchronized screens while maintaining identical metadata, captions, graphics and editorial information. The camera rotates around a central glowing media hub as streams of video travel outward toward **TV broadcast, web, mobile, social media, newsroom displays and live events**. Show elegant UI panels containing video clips, headlines, metadata, captions and approval status. Digital connections pulse between every screen, visually communicating seamless content distribution. Build toward a spectacular wide shot where hundreds of screens across a futuristic city display synchronized news content. **Dark navy and black palette, electric cyan and blue illumination, premium newsroom graphics, photorealistic technology, cinematic depth of field, volumetric lighting, smooth motion, sophisticated data visualization, no clutter, no cartoon elements, 4K UHD, 16:9.**
+
+---
+
+ ### 4\. MASTER PROMPT — “The Intelligent Media Workflow”
+
+ > **Create a high-end futuristic animated explainer for an intelligent media-management platform used by a modern newsroom.** Begin with thousands of video, audio, image and metadata assets floating inside a secure digital archive. A glowing AI-style search interface rapidly organizes the content by story, date, location, rights and keywords. Transition into an automated editing environment where video clips assemble themselves into a polished news package. Show captions being generated, graphics appearing, audio waveforms synchronizing and editorial approvals moving through the workflow. Visualize collaboration between journalists, producers, editors and broadcast operators using connected digital avatars and interface panels. Then show the completed story moving through a secure media infrastructure with **permissions, audit trails, redundancy, backup and recovery** represented visually by glowing shields and server systems. End with the finished package going live across multiple screens. **Futuristic newsroom, enterprise technology aesthetic, elegant cyan neon, dark blue environment, realistic servers and broadcast equipment, cinematic camera choreography, premium motion design, subtle holographic interfaces, sophisticated and trustworthy, 4K, 16:9.**
+
+---
+
+ ### 5\. MASTER PROMPT — “News Moves the World Forward”
+
+ > **Create a powerful cinematic closing sequence for a global broadcast technology presentation.** Begin inside a dark futuristic newsroom at night. Thousands of screens display different live stories from around the world. Slowly reveal glowing lines connecting journalists, cameras, studios, media servers and audiences across a digital globe. The camera rises above the newsroom and transitions into a spectacular holographic Earth surrounded by flowing cyan communication networks. Show four elegant visual concepts appearing one after another: **FASTER TO AIR — METADATA CONTINUITY — ONE SOURCE, MULTIPLE SCREENS — RESILIENT OPERATIONS**. Each phrase appears as premium broadcast typography integrated naturally into the environment. Digital signals accelerate around the globe, then converge into a brilliant central media hub. Finish with a clean dark-blue background, subtle glowing horizon, sophisticated corporate logo area and the cinematic message **“NEWS MOVES THE WORLD FORWARD.”** Premium international newsroom aesthetic, cinematic blue lighting, cyan neon accents, volumetric atmosphere, photorealistic, elegant motion graphics, slow dramatic camera movement, seamless transitions, 4K UHD, 16:9, polished broadcast-network commercial.
+
+ ### Recommended consistency settings
+
+ For all 5 clips, keep these parameters consistent:
+
+ **Style:** Futuristic broadcast / enterprise technology\
+ **Aspect ratio:** 16:9\
+ **Resolution:** 4K UHD\
+ **Color palette:** `#031426` navy, `#062C50` blue, `#00BFFF` cyan, white highlights\
+ **Camera:** Slow cinematic dolly, orbital movements, controlled crane shots\
+ **Lighting:** LED screens, cyan rim lighting, volumetric beams, subtle reflections\
+ **Motion:** Smooth, premium, deliberate—not chaotic\
+ **Graphics:** Glassmorphism, holographic interfaces, thin-line icons, elegant data flows\
+ **Mood:** Trustworthy, innovative, global, fast, resilient\
+ **Avoid:** Cartoon look, excessive particles, shaky camera, cheesy sci-fi effects, cluttered UI, distorted text, low-resolution screens.
+
+--------------------------------------------------------------------------------------------------------------
+
+
+
+---
+
+ ## 1\.  Newsroom Content Acquisition Tracker
+
+ **Prompt:**
+
+ > Create an Excel workbook called **Newsroom Acquisition Tracker** for managing incoming video, audio, image, and live-news assets. Create columns for Story ID, Story Name, Source, Reporter, Location, Date Received, Time Received, Media Type, Priority, Rights Status, Ingest Status, Metadata Status, and Assigned Editor. Convert the data into an Excel Table named `tblAcquisition`.
+>
+>  Add formulas to calculate:
+>
+>  - Age of each incoming asset in hours
+> - SLA status
+> - Days pending
+> - Completion percentage
+>
+>  Use formulas such as `TODAY()`, `NOW()`, `IF()`, `COUNTIF()`, and `XLOOKUP()`. Add conditional formatting for **Critical, Delayed, In Progress, and Completed** items.
+>
+>  Create a dashboard showing total assets received, assets pending, assets completed, average processing time, and SLA compliance percentage.
+
+---
+
+ ## 2\.  Media Workflow Pipeline
+
+ **Prompt:**
+
+ > Build an Excel workflow tracker based on the eight newsroom stages: **Acquire, Manage, Discover, Create, Collaborate, Enrich, Deliver, Protect**.
+>
+>  Create a table called `tblWorkflow` with Story ID, Story Name, Current Stage, Owner, Start Time, Target Time, Completion Time, Status, Priority, and Notes.
+>
+>  Create formulas that calculate:
+>
+>  `Stage Duration = Completion Time - Start Time`
+>
+>  `Remaining Time = Target Time - NOW()`
+>
+>  `SLA Status = IF(Remaining Time<0,"OVERDUE",IF(Remaining Time<2/24,"AT RISK","ON TRACK"))`
+>
+>  Create a visual pipeline showing how many stories are currently in each stage.
+
+---
+
+ ## 3\.  Faster-to-Air KPI Calculator
+
+ **Prompt:**
+
+ > Create an Excel dashboard measuring how quickly newsroom content moves from acquisition to broadcast.
+>
+>  Create columns for Story ID, Received Time, Editing Start, Editing End, Approval Time, Broadcast Time.
+>
+>  Add formulas for:
+>
+>  `Ingest Time = Editing Start - Received Time`
+>
+>  `Editing Time = Editing End - Editing Start`
+>
+>  `Approval Time = Approval Time - Editing End`
+>
+>  `Total Time to Air = Broadcast Time - Received Time`
+>
+>  Calculate average, minimum, maximum, and median Time to Air using `AVERAGE()`, `MIN()`, `MAX()`, and `MEDIAN()`.
+>
+>  Display the results as KPI cards and create a line chart showing Time to Air by story.
+
+---
+
+ ## 4\.  Media Asset Search & Discovery Sheet
+
+ **Prompt:**
+
+ > Create an Excel media discovery database for a newsroom archive.
+>
+>  Include Story ID, Asset ID, Headline, Description, Keywords, Location, Reporter, Date Created, Media Type, Rights, Duration, Archive Location, and Search Tags.
+>
+>  Create a search area where a user can enter a keyword, Story ID, reporter, or location.
+>
+>  Use `FILTER()`, `SEARCH()`, `ISNUMBER()`, and `IFERROR()` to dynamically return matching assets.
+>
+>  Create a formula-driven search result table showing all matching media assets without requiring manual filtering.
+
+---
+
+ ## 5\.  Metadata Continuity Manager
+
+ **Prompt:**
+
+ > Build an Excel **Metadata Continuity Dashboard** for newsroom content.
+>
+>  Track Story ID, Asset ID, Headline, Description, Keywords, Location, Date, Reporter, Copyright, Rights Expiry, Caption Status, Metadata Completeness, and Verification Status.
+>
+>  Create a formula that calculates metadata completeness:
+>
+>  `=COUNTA(required metadata fields)/number of required fields`
+>
+>  Format the result as a percentage.
+>
+>  Create a status formula:
+>
+>  `=IF([@[Metadata Completeness]]>=95%,"COMPLETE",IF([@[Metadata Completeness]]>=70%,"PARTIAL","MISSING"))`
+>
+>  Add conditional formatting and a dashboard showing Metadata Complete %, Partial %, and Missing %.
+
+---
+
+ ## 6\.  Newsroom Collaboration & Approval Tracker
+
+ **Prompt:**
+
+ > Create an Excel collaboration tracker for journalists, producers, editors, graphics teams, and approvers.
+>
+>  Columns should include Story ID, Story Name, Assigned To, Department, Task, Priority, Start Date, Due Date, Status, Approval Required, Approver, Approval Date, and Comments.
+>
+>  Use formulas to identify overdue tasks:
+>
+>  `=IF(AND([@Status]<>"Completed",[@[Due Date]]<TODAY()),"OVERDUE","ON TRACK")`
+>
+>  Calculate team completion percentage and overdue task percentage.
+>
+>  Create a dashboard showing workload by department and employee.
+
+---
+
+ ## 7\.  One Source → Multiple Screens Calculator
+
+ **Prompt:**
+
+ > Create an Excel distribution tracker showing how one news story is delivered to multiple platforms.
+>
+>  Platforms should include TV, Web, Mobile, Social Media, Live Stream, Digital Signage, and Internal Newsroom.
+>
+>  Create columns for Story ID, Story Name, Platform, Publish Status, Publish Time, URL/Reference, Editor, and Audience Estimate.
+>
+>  Calculate:
+>
+>  `Platform Completion % = Completed Platforms / Total Platforms`
+>
+>  `Distribution Success Rate = Successful Deliveries / Total Delivery Attempts`
+>
+>  Create a dashboard showing how many stories were successfully distributed across each platform.
+
+---
+
+ ## 8\.  Rights, Permissions & Protection Tracker
+
+ **Prompt:**
+
+ > Create an Excel rights-management tracker for media assets.
+>
+>  Include Asset ID, Story ID, Content Owner, Source, License Type, Rights Start Date, Rights Expiry Date, Allowed Platforms, Geographic Restrictions, Approval Status, and Notes.
+>
+>  Create a formula:
+>
+>  `=IF([@[Rights Expiry Date]]<TODAY(),"EXPIRED",IF([@[Rights Expiry Date]]<=TODAY()+30,"EXPIRING SOON","VALID"))`
+>
+>  Use red formatting for expired rights, orange for rights expiring within 30 days, and green for valid rights.
+>
+>  Add a dashboard showing total valid, expired, and expiring assets.
+
+---
+
+ ## 9.  Newsroom Storage Capacity Planner
+
+ **Prompt:**
+
+ > Build an Excel storage-management dashboard for a modern newsroom.
+>
+>  Track Server Name, Storage Type, Total Capacity TB, Used Storage TB, Free Storage TB, Daily Growth TB, Backup Capacity TB, and Archive Capacity TB.
+>
+>  Create formulas:
+>
+>  `Free Storage = Total Capacity - Used Storage`
+>
+>  `Storage Utilization % = Used Storage / Total Capacity`
+>
+>  `Estimated Days Remaining = Free Storage / Daily Growth`
+>
+>  Add conditional formatting:
+>
+>  - Green: below 70%
+> - Amber: 70–85%
+> - Red: above 85%
+>
+>  Create charts showing storage utilization and projected capacity exhaustion.
+
+---
+
+ ## 10\.  Newsroom Performance Dashboard
+
+ **Prompt:**
+
+ > Create an executive Excel dashboard for a modern broadcast newsroom.
+>
+>  Combine data from acquisition, editing, collaboration, metadata, delivery, and storage tables.
+>
+>  Display these KPIs:
+>
+>  - Stories Received
+> - Stories Published
+> - Average Time to Air
+> - SLA Compliance %
+> - Metadata Completion %
+> - Approval Completion %
+> - Distribution Success %
+> - Storage Utilization %
+> - Rights Expiring
+> - Overdue Tasks
+>
+>  Use formulas such as `COUNTIFS()`, `SUMIFS()`, `AVERAGEIFS()`, `XLOOKUP()`, and `IFERROR()`.
+>
+>  Create a dark-blue/cyan professional dashboard inspired by a futuristic broadcast newsroom.
+
+---
+
+ ## 11\.  Copilot Formula Generator
+
+ This one is especially useful if you want **Copilot to behave like an Excel formula assistant**.
+
+ **Prompt:**
+
+ > Act as an expert Microsoft Excel formula assistant for a professional broadcast newsroom.
+>
+>  When I describe a business requirement, identify the relevant Excel table and columns and provide:
+>
+>  **1\. Formula**\
+>  **2\. What the formula does**\
+>  **3\. Example result**\
+>  **4\. Alternative formula if applicable**\
+>  **5\. Any assumptions**
+>
+>  Prefer modern Excel functions such as `XLOOKUP`, `FILTER`, `SORT`, `UNIQUE`, `LET`, `IFS`, `COUNTIFS`, `SUMIFS`, `AVERAGEIFS`, and dynamic arrays.
+>
+>  Example request:
+>
+>  "Tell me which stories are overdue."
+>
+>  Return an Excel formula that identifies records where Status is not Completed and Due Date is earlier than today.
+>
+>  Always use structured references when the data is stored in an Excel Table.
+
+---
+
+ ## 12\.  Complete “Modern Newsroom” Excel Copilot
+
+ **Prompt:**
+
+ > Act as an **Excel Business Intelligence Assistant for a modern broadcast newsroom**.
+>
+>  Design an integrated workbook based on this workflow:
+>
+>  **ACQUIRE → MANAGE → DISCOVER → CREATE → COLLABORATE → ENRICH → DELIVER → PROTECT**
+>
+>  Create interconnected Excel Tables for:
+>
+>  `tblStories`\
+>  `tblAssets`\
+>  `tblWorkflow`\
+>  `tblTasks`\
+>  `tblMetadata`\
+>  `tblDistribution`\
+>  `tblRights`\
+>  `tblStorage`
+>
+>  Use `Story ID` and `Asset ID` as primary identifiers and connect tables using `XLOOKUP()` or other appropriate Excel functions.
+>
+>  Automatically calculate:
+>
+>  **Story Completion %**\
+>  **Time to Air**\
+>  **SLA Status**\
+>  **Metadata Completion %**\
+>  **Approval Status**\
+>  **Distribution Success %**\
+>  **Rights Status**\
+>  **Storage Utilization %**\
+>  **Overdue Tasks**
+>
+>  Create an executive dashboard with KPI cards, charts, workflow status, platform distribution, storage capacity, rights alerts, and production performance.
+>
+>  Use a **premium dark navy, electric blue and cyan visual theme** inspired by a futuristic broadcast newsroom. Keep the workbook professional, clean, highly readable, and suitable for presentation to newsroom management.
+
+---
+
+ ###  A useful formula pattern for your Copilot prompts
+
+ You can also tell Copilot to generate formulas using this style:
+
+```
+=IF([@Status]="Completed",
+   "COMPLETED",
+   IF([@[Due Date]]<TODAY(),
+      "OVERDUE",
+      IF([@[Due Date]]<=TODAY()+2,
+         "AT RISK",
+         "ON TRACK"
+      )
+   )
+)
+```
+
+ And for a **workflow completion percentage**:
+
+```
+=COUNTIF(tblWorkflow[Status],"Completed")/COUNTA(tblWorkflow[Story ID])
+```
+
+ For **average Time to Air**:
+
+```
+=AVERAGE(tblStories[Time to Air])
+```
+
+ For **dynamic overdue stories**:
+
+```
+=FILTER(tblStories,tblStories[Status]<>"Completed")
+```
+
+ For **rights expiring within 30 days**:
+
+```
+=FILTER(tblRights,
+(tblRights[Rights Expiry Date]>=TODAY())*
+(tblRights[Rights Expiry Date]<=TODAY()+30))
+```
+
+ These prompts can effectively turn the image's **8-stage media workflow into an actual Excel/Copilot operating model**, rather than just making a visual dashboard.

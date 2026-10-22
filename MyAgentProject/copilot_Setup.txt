@@ -1,0 +1,441 @@
+
+
+You can make **Copilot Studio insert a new product record into your Dataverse table**, and then your existing **Power Automate scheduled flow runs every 5 minutes and calculates the 10% discount**.
+
+The architecture would be:
+
+```text
+Copilot Studio
+      ↓
+Power Automate Flow
+      ↓
+Dataverse Table
+myProductDiscountsnews
+      ↓
+Every 5 Minutes
+Scheduled Discount Flow
+      ↓
+Calculate 10%
+      ↓
+Update FinalPrice
+      ↓
+Power Apps Table
+```
+
+## 1. Your existing table
+
+From your screenshot, you already have:
+
+| ProductID | ProductName | OriginalPrice | FinalPrice |
+| --------: | ----------- | ------------: | ---------: |
+|         1 | Apple       |        234.00 |     210.60 |
+|         2 | Orange      |        134.00 |     120.60 |
+|         3 | Pineapple   |        200.00 |     180.00 |
+|         4 | Grapes      |         56.30 |      50.67 |
+
+The important point is that **Power Apps and Copilot Studio can work with the same Dataverse table**.
+
+So you don't need another table.
+
+---
+
+# 2. Create a second Power Automate flow
+
+Keep your existing scheduled flow exactly as it is.
+
+Create another flow specifically for Copilot.
+
+Go to:
+
+**Power Automate → Create → Instant cloud flow**
+
+Select:
+
+### Trigger
+
+**When an agent calls the flow**
+
+This allows Copilot Studio to call Power Automate.
+
+Name it:
+
+```text
+Copilot_Insert_Product
+```
+
+Your architecture becomes:
+
+```text
+              COPILOT STUDIO
+                    │
+                    │ Product information
+                    ↓
+          ┌──────────────────────┐
+          │ Copilot_Insert_Product│
+          │ Power Automate        │
+          └──────────┬───────────┘
+                     ↓
+             Dataverse Table
+          myProductDiscountsnews
+                     │
+                     ↓
+          Scheduled Flow
+          Every 5 Minutes
+                     │
+                     ↓
+             Calculate 10%
+                     │
+                     ↓
+               FinalPrice
+```
+
+---
+
+# 3. Add inputs to the Copilot flow
+
+In the **When an agent calls the flow** trigger, add inputs.
+
+I recommend these three:
+
+### Input 1
+
+```text
+ProductID
+```
+
+Type:
+
+**Text**
+
+### Input 2
+
+```text
+ProductName
+```
+
+Type:
+
+**Text**
+
+### Input 3
+
+```text
+OriginalPrice
+```
+
+Type:
+
+**Number**
+
+So Copilot will be able to send something like:
+
+```text
+ProductID = 5
+ProductName = Mango
+OriginalPrice = 150
+```
+
+---
+
+# 4. Add "Add a new row"
+
+After the trigger:
+
+**+ New step**
+
+Search:
+
+```text
+Microsoft Dataverse
+```
+
+Select:
+
+### Add a new row
+
+Choose your table:
+
+```text
+myProductDiscountsnews
+```
+
+Then map the fields.
+
+| Dataverse field | Flow value    |
+| --------------- | ------------- |
+| ProductID       | ProductID     |
+| ProductName     | ProductName   |
+| OriginalPrice   | OriginalPrice |
+| FinalPrice      | Leave empty   |
+
+So the flow inserts:
+
+```text
+5 | Mango | 150 | blank
+```
+
+into Dataverse.
+
+---
+
+# 5. Why leave FinalPrice blank?
+
+Because your **other scheduled flow** is responsible for calculating the discount.
+
+You already have:
+
+```text
+OriginalPrice × 0.9
+```
+
+So:
+
+```text
+150 × 0.9
+= 135
+```
+
+After your scheduled flow executes, the record becomes:
+
+| ProductID | ProductName | OriginalPrice | FinalPrice |
+| --------: | ----------- | ------------: | ---------: |
+|         5 | Mango       |        150.00 | **135.00** |
+
+---
+
+# 6. Save and test the Copilot flow
+
+Save the flow.
+
+Then go back to:
+
+**Copilot Studio**
+
+Open your agent.
+
+You need to add the Power Automate flow as an **Action**.
+
+Depending on your current Copilot Studio interface, look for:
+
+**Add an action → Power Automate**
+
+and select:
+
+```text
+Copilot_Insert_Product
+```
+
+Copilot will then know that it can call this flow.
+
+---
+
+# 7. What you can say to Copilot
+
+For example:
+
+> Add a new product Mango with Product ID 5 and original price 150.
+
+Copilot extracts:
+
+```text
+ProductID = 5
+ProductName = Mango
+OriginalPrice = 150
+```
+
+and calls:
+
+```text
+Copilot_Insert_Product
+```
+
+Power Automate creates:
+
+```text
+ProductID: 5
+ProductName: Mango
+OriginalPrice: 150
+FinalPrice: blank
+```
+
+in Dataverse.
+
+---
+
+# 8. Then your 5-minute flow runs
+
+Your existing scheduled flow starts:
+
+```text
+Recurrence
+Every 5 minutes
+       ↓
+List rows
+       ↓
+Apply to each
+       ↓
+OriginalPriceNumber
+       ↓
+FinalPriceCalculated
+       ↓
+Update a row
+```
+
+Your calculation is:
+
+```text
+150 × 0.9
+```
+
+Result:
+
+```text
+135
+```
+
+Then Dataverse becomes:
+
+| ProductID | ProductName | OriginalPrice | FinalPrice |
+| --------: | ----------- | ------------: | ---------: |
+|         5 | Mango       |        150.00 | **135.00** |
+
+And because Power Apps is displaying the same Dataverse table, the record will appear there too.
+
+---
+
+# ⭐ One thing I recommend changing
+
+There is a small problem with your current scheduled flow.
+
+If it processes **every row every 5 minutes**, it will repeatedly update:
+
+```text
+Apple
+Orange
+Pineapple
+Grapes
+Mango
+...
+```
+
+every 5 minutes.
+
+A better design is to add a status column such as:
+
+```text
+DiscountProcessed
+```
+
+with:
+
+```text
+No
+```
+
+when Copilot inserts a new product.
+
+Then your scheduled flow processes only:
+
+```text
+DiscountProcessed = No
+```
+
+After calculating the discount, it changes it to:
+
+```text
+Yes
+```
+
+The architecture becomes:
+
+```text
+             COPILOT
+                │
+                ↓
+        Add new Dataverse row
+                │
+                ↓
+       DiscountProcessed = No
+                │
+                ↓
+       ┌─────────────────┐
+       │ Every 5 minutes │
+       └────────┬────────┘
+                ↓
+       Find unprocessed rows
+                ↓
+          Calculate 10%
+                ↓
+         Update FinalPrice
+                ↓
+       DiscountProcessed = Yes
+```
+
+This is much cleaner for a real application.
+
+### Example
+
+Copilot:
+
+> Add Laptop, Product ID 10, price 2500.
+
+Dataverse immediately:
+
+```text
+10 | Laptop | 2500 | blank | No
+```
+
+Within the next scheduled run:
+
+```text
+2500 × 0.90 = 2250
+```
+
+Dataverse:
+
+```text
+10 | Laptop | 2500 | 2250 | Yes
+```
+
+Power Apps then shows:
+
+**Laptop — Original: 2500 — Discount Price: 2250**
+
+---
+
+## Your complete solution
+
+You will have **two Power Automate flows**:
+
+### Flow 1 — Copilot Insert
+
+```text
+When an agent calls the flow
+          ↓
+ProductID
+ProductName
+OriginalPrice
+          ↓
+Dataverse — Add a new row
+```
+
+### Flow 2 — Automatic Discount
+
+```text
+Recurrence
+Every 5 minutes
+          ↓
+Dataverse — List rows
+          ↓
+Apply to each
+          ↓
+OriginalPrice × 0.9
+          ↓
+Update Dataverse row
+          ↓
+FinalPrice
+```
+
+**Copilot → Dataverse → Scheduled Power Automate → FinalPrice → Power Apps** is therefore completely workable.
+
+If you want, I can give you the **exact Copilot Studio setup next, step-by-step, including how to create the three inputs and connect `ProductID`, `ProductName`, and `OriginalPrice` from the Copilot conversation to the Power Automate flow.**

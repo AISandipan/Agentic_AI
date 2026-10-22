@@ -1,0 +1,1161 @@
+
+
+
+
+from chatterbot import ChatBot
+from chatterbot.trainers import ListTrainer
+import customtkinter as ctk
+import webbrowser
+import re
+import os
+from datetime import datetime
+from psych_analysis import analyze_psychology
+import subprocess
+from tkinter import filedialog, messagebox
+# AI image analysis imports.......
+import torch
+from PIL import Image
+from transformers import CLIPProcessor, CLIPModel, BlipProcessor, BlipForConditionalGeneration
+
+ctk.set_appearance_mode("dark")
+ctk.set_default_color_theme("dark-blue")
+
+if os.path.exists("db.sqlite3"):
+    os.remove("db.sqlite3")
+
+chatbot = ChatBot("HEXBot")
+trainer = ListTrainer(chatbot)
+
+conversation = [
+    "Hi", "Hello!",
+    "Hello", "Hi there!",
+    "How are you?", "I'm good, thank you! How about you?",
+    "I am fine", "Glad to hear that!",
+    "bye", "Bye!",
+    "Bye", "Bye!",
+    "What's your name?", "I'm ChatterBot, your chatbot!",
+    "What do you do?", "I chat with you and try to help!",
+    "Where are you from?", "I exist in the digital world!",
+    "Who created you?", "I was created by a developer like you!",
+    "Can you help me?", "Sure! What do you need help with?",
+    "Tell me a joke", "Why don't scientists trust atoms? Because they make up everything!",
+    "What is AI?", "AI stands for Artificial Intelligence, which enables machines to think like humans.",
+    "What is Machine Learning?", "Machine Learning is a subset of AI that allows computers to learn from data.",
+    "Do you have feelings?", "No, but I can understand emotions!",
+    "What’s your favorite color?", "I like all colors equally!",
+    "Do you eat?", "No, I don’t need food!",
+    "What’s the capital of France?", "The capital of France is Paris.",
+    "What is 2 + 2?", "2 + 2 is 4.","What is a syllabus?", "A syllabus is an outline of the subjects in a course of study or teaching.",
+    "What is critical thinking?", "Critical thinking is the objective analysis and evaluation of an issue in order to form a judgment.",
+    "What is Ivy League?", "The Ivy League is a group of eight long-established and prestigious universities in the northeastern US.",
+    "What is MOHAP?", "The Ministry of Health and Prevention (MOHAP) is the federal ministry responsible for the implementation of health policy in the UAE.",
+    "What is the Golden Visa for students?", "It is a long-term residence visa for outstanding students and graduates with high academic performance.",
+    "What is Cleveland Clinic Abu Dhabi?", "It is a world-class multispecialty hospital located on Al Maryah Island in Abu Dhabi.",
+    "What is Khalifa University known for?", "Khalifa University is a top-ranked institution in Abu Dhabi specializing in science, technology, and research.",
+    "What is the literacy rate in the UAE?", "The literacy rate in the United Arab Emirates is very high, estimated at over 98%.",
+    "What is mandatory health insurance in Dubai?", "In Dubai, it is a legal requirement for all residents to have at least the Essential Benefits Plan (EBP), which must be provided by their employer or sponsor.",
+    "What happens if I don't have health insurance in the UAE?", "Failure to have valid insurance can lead to monthly fines (currently around AED 500) and may result in the denial of residency visa issuance or renewal.",
+    "What is the Thiqa program?", "Thiqa is a comprehensive healthcare program for UAE Nationals in Abu Dhabi, providing access to a large network of public and private providers.",
+    "How do I book a medical appointment in Dubai?", "You can book appointments through the DHA app, the individual hospital's portal, or by calling the facility directly.",
+    "What is a co-payment?", "A co-payment is a fixed percentage or amount (often 20%) that the insured person pays out-of-pocket for medical services or medications.",
+    "Can I use an AI chatbot for medical diagnosis?", "Chatbots are intended for providing information, explaining terminology, and triage support. They are not a substitute for professional medical advice or emergency care.",
+    "What is telemedicine?", "Telemedicine allows patients to consult with doctors remotely via video or audio calls, often accessible through insurance provider apps in the UAE.",
+    "What is the KHDA?", "The Knowledge and Human Development Authority (KHDA) is the regulatory body for private education in Dubai, ensuring high standards from early childhood to higher education.",
+    "What is the ADEK?", "The Abu Dhabi Department of Education and Knowledge (ADEK) oversees and regulates the education sector in the Emirate of Abu Dhabi.",
+    "What are the common university admission requirements in the UAE?", "Requirements typically include a high school certificate (EmSAT or equivalent), English proficiency scores (IELTS/TOEFL), and a valid Emirates ID.",
+    "What is the EmSAT?", "The Emirates Standardized Test (EmSAT) is a national system of standardized computer-based tests used for university admissions in the UAE.",
+    "Can students get a Golden Visa?", "Yes, outstanding students with high academic performance in secondary school or university are eligible for a long-term 10-year residency visa in the UAE.",
+    "What is blended learning?", "Blended learning is an educational approach that combines traditional face-to-face classroom methods with online digital materials and interaction.",
+    "What is an LMS?", "A Learning Management System (LMS) is a software application for the administration, documentation, tracking, and delivery of educational courses or training programs."
+]
+trainer.train(conversation)
+def handle_web(text):
+    text = text.lower().strip()
+
+    sites = {
+        "google": "https://www.google.com",
+        "gmail": "https://www.gmail.com",
+        "yahoo": "https://www.yahoo.com",
+        "facebook": "https://www.facebook.com",
+        "chatgpt": "https://www.chat.openai.com",
+        "youtube": "https://www.youtube.com",
+        "github": "https://www.github.com",
+        "instagram":"https://www.instagram.com",
+        "linkedin": "https://www.linkedin.com",
+        "twitter": "https://www.twitter.com",
+        "reddit": "https://www.reddit.com",
+        "tiktok": "https://www.tiktok.com",
+        "pinterest": "https://www.pinterest.com",
+        "discord": "https://www.discord.com",
+        "slack": "https://www.slack.com",
+        "notion": "https://www.notion.so",
+        "trello": "https://www.trello.com",
+        "canva": "https://www.canva.com",
+        "stackoverflow": "https://www.stackoverflow.com",
+        "figma": "https://www.figma.com",
+        "netflix": "https://www.netflix.com",
+        "twitch": "https://www.twitch.tv",
+        "spotify": "https://www.spotify.com",
+        "amazon": "https://www.amazon.com",
+        "ebay": "https://www.ebay.com",
+        "wikipedia": "https://www.wikipedia.org",
+        "gemini":"https://www.gemini.google.com/app",
+        "mayoclinic": "https://www.mayoclinic.org",
+        "webmd": "https://www.webmd.com",
+        "healthline": "https://www.healthline.com",
+        "zocdoc": "https://www.zocdoc.com",
+        "myfitnesspal": "https://www.myfitnesspal.com",
+        "nih": "https://www.nih.gov",
+        "who": "https://www.who.int",
+        "mohap": "https://mohap.gov.ae",
+        "dha": "https://dha.gov.ae",
+        "seha": "https://seha.ae",
+        "clevelandclinicabudhabi": "https://www.clevelandclinicabudhabi.ae",
+        "ehs": "https://www.ehs.gov.ae",
+        "coursera": "https://www.coursera.org",
+        "udemy": "https://www.udemy.com",
+        "khanacademy": "https://www.khanacademy.org",
+        "edx": "https://www.edx.org",
+        "duolingo": "https://www.duolingo.com",
+        "quizlet": "https://www.quizlet.com",
+        "scholar": "https://scholar.google.com",
+        "moe": "https://www.moe.gov.ae",
+        "uaeu": "https://www.uaeu.ac.ae",
+        "khalifa": "https://www.ku.ac.ae",
+        "aus": "https://www.aus.edu",
+        "zayed": "https://www.zu.ac.ae"
+    }
+
+    for key,url in sites.items():
+        if text == key or text == f"open{key}" or text == f"go to {key}":
+            webbrowser.open(url)
+            return f"Opening {key.capitalize()}..."
+        
+    if text.startswith("search "):
+        query = text.replace("search ", "")
+        webbrowser.open(f"https://www.google.com/search?q={query}")
+        return f"Searching for '{query}'..."
+
+    url_pattern = re.compile(
+        r'^(https?://)?(www\.)?[a-z0-9-]+\.[a-z]{2,}(/.*)?$'
+    )
+    if url_pattern.match(text):
+        if not text.startswith("http"):
+            text = "https://" + text
+        webbrowser.open(text)
+        return f"Opening {text}..."
+    
+    return None
+
+def generate_image():
+    app.destroy()
+    subprocess.call(['python', "Image_cat_new.py"])
+
+def back():
+    subprocess.Popen(["python", "nlpapp1.py"])
+    root.destroy()  
+
+def scroll():
+    app.after(50, lambda: chat_frame._parent_canvas.yview_moveto(1.0))
+
+def weather_location():
+    app.destroy()
+    subprocess.call(['python', "Weather_location_json_App_updated.py"])
+
+def upload_psych_file():
+    file_path = filedialog.askopenfilename(filetypes=[("Text Files", "*.txt")])
+    
+    if not file_path:
+        return
+    
+    with open(file_path, "r", encoding="utf-8") as f:
+        text = f.read()
+
+    result = analyze_psychology(text)
+    display_result(result)
+
+
+def display_result(result):
+    current_time = datetime.now().strftime("%H:%M")
+
+    bot_label = ctk.CTkLabel(chat_frame, text=result,fg_color="#1F6AA5",corner_radius=8,anchor="w",justify="left",text_color="white",wraplength=300,padx=10)
+    bot_label.pack(side="top", anchor="w", padx=10, pady=(2,5))
+
+    scroll()
+
+
+#--------PSYCH ANALYSIS UPLOAD THE TXT FILE------------
+def upload_psych_file():
+    file_path = filedialog.askopenfilename(filetypes=[("Text Files", "*.txt")])
+    
+    if not file_path:
+        return
+    
+    with open(file_path, "r", encoding="utf-8") as f:
+        text = f.read()
+
+    result = analyze_psychology(text)
+    display_result(result)
+    
+'''
+#---------------NLP IMPLEMENTATION NEW-------------
+
+def analyze_image():
+    file_path = filedialog.askopenfilename(
+        title="Select an Image",
+        filetypes=[("Image Files", "*.jpg *.jpeg *.png *.bmp *.webp")]
+    )
+    if not file_path:
+        return
+
+    # Loading popup
+    loading_win = ctk.CTkToplevel(app)
+    loading_win.title("Analyzing...")
+    loading_win.geometry("280x80")
+    loading_win.grab_set()
+    ctk.CTkLabel(loading_win, text="Analyzing image, please wait...").pack(expand=True)
+    app.update()
+
+    try:
+        image = Image.open(file_path).convert("RGB")
+
+        # --- BLIP: Generate a caption ---
+        blip_processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
+        blip_model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base")
+        blip_inputs = blip_processor(image, return_tensors="pt")
+        with torch.no_grad():
+            caption_ids = blip_model.generate(**blip_inputs, max_new_tokens=50)
+        caption = blip_processor.decode(caption_ids[0], skip_special_tokens=True)
+
+        # --- CLIP: Classify against candidate labels ---
+        clip_model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
+        clip_processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
+        labels = ["a person", "an animal", "a car", "food", "a building",
+                  "nature or landscape", "technology or electronics", "text or a document"]
+        clip_inputs = clip_processor(text=labels, images=image, return_tensors="pt", padding=True)
+        with torch.no_grad():
+            outputs = clip_model(**clip_inputs)
+        probs = outputs.logits_per_image.softmax(dim=1)[0]
+        top_idx = probs.argmax().item()
+        top_label = labels[top_idx]
+        confidence = f"{probs[top_idx].item() * 100:.1f}%"
+
+        loading_win.destroy()
+
+        # Show result in chat
+        result = f"[Image Analysis]\nCaption: {caption}\nTop category: {top_label} ({confidence})"
+        current_time = datetime.now().strftime("%H:%M")
+
+        user_label = ctk.CTkLabel(chat_frame, text="📷 Image uploaded for analysis",
+                                  fg_color="#2B2B2B", corner_radius=8, anchor="e",
+                                  justify="right", text_color="white", wraplength=300, padx=10)
+        user_label.pack(side="top", anchor="e", padx=10, pady=(2, 5))
+        ctk.CTkLabel(chat_frame, text="You • " + current_time,
+                     font=("Arial", 10), text_color="gray").pack(side="top", anchor="e", padx=15, pady=(0, 5))
+
+        bot_label = ctk.CTkLabel(chat_frame, text=result,
+                                 fg_color="#1F6AA5", corner_radius=8, anchor="w",
+                                 justify="left", text_color="white", wraplength=300, padx=10)
+        bot_label.pack(side="top", anchor="w", padx=10, pady=(2, 5))
+        ctk.CTkLabel(chat_frame, text="Bot • " + current_time,
+                     font=("Arial", 10), text_color="gray").pack(side="top", anchor="w", padx=15, pady=(0, 5))
+        scroll()
+
+    except Exception as e:
+        loading_win.destroy()
+        messagebox.showerror("Analysis Error", f"Failed to analyze image:\n{str(e)}")'''
+
+def send_message():
+    msg = entry.get().strip()
+    if not msg:
+        return
+    
+    current_time = datetime.now().strftime("%H:%M");
+
+    user_label = ctk.CTkLabel(chat_frame, text = msg,
+                              fg_color = "#2B2B2B",
+                              corner_radius = 8,
+                              anchor = "e",
+                              justify = "right",
+                              text_color = "white",
+                              wraplength = 300,
+                              padx = 10)
+    user_label.pack(side="top", anchor="e", padx=10, pady=(2,5))
+
+    user_time_label = ctk.CTkLabel(chat_frame, text="You • " + current_time,
+                                   font=("Arial", 10),
+                                   text_color="gray")
+    user_time_label.pack(side="top", anchor="e", padx=15, pady=(0, 5))
+    scroll()
+
+    web_response = handle_web(msg)
+    if web_response:
+        reply = web_response
+    else:
+        reply = chatbot.get_response(msg)
+    
+    bot_label = ctk.CTkLabel(chat_frame, text = reply,
+                              fg_color = "#1F6AA5",
+                              corner_radius = 8,
+                              anchor = "w",
+                              justify = "left",
+                              text_color = "white",
+                              wraplength = 300,
+                              padx = 10)
+    bot_label.pack(side="top", anchor="w", padx=10, pady=(2,5))
+
+    bot_time_label = ctk.CTkLabel(chat_frame, text="Bot • " + current_time,
+                                   font=("Arial", 10),
+                                   text_color="gray")
+    bot_time_label.pack(side="top", anchor="w", padx=15, pady=(0, 5))
+    scroll()
+
+    entry.delete(0, "end")
+    entry.focus()
+
+app = ctk.CTk()
+app.title("HEX ChatBot (Dark Mode)")
+app.geometry("420x540")
+
+header = ctk.CTkFrame(app, height = 60, fg_color = "#1C1C1C")
+header.pack(fill = "x")
+
+title = ctk.CTkLabel(header, text='HEX ChatBot', font = ("Monteserrat", 22, "bold"))
+title.pack(side = "left", padx = 20, pady = 10)
+
+time_label = ctk.CTkLabel(header, font = ("Consolas", 12))
+time_label.pack(side = "right",  padx = 20)
+
+def update_time():
+    time_label.configure(text = datetime.now().strftime("%d/%m/%Y %H:%M:%S"))
+    app.after(1000,update_time)
+
+update_time()
+
+chat_frame = ctk.CTkScrollableFrame(app, fg_color = "#121212")
+chat_frame.pack(fill = "both", expand = True, padx = 10, pady = 10)
+
+input_frame = ctk.CTkFrame(app, height = 70, fg_color = "#1C1C1C")
+input_frame.pack(fill = "x", padx = 10, pady = 10)
+
+entry = ctk.CTkEntry(input_frame, placeholder_text = "Type a message",
+                     font = ("Arial", 16))
+entry.pack(side = "left", fill = "x", expand = True, padx = 10, pady = 10)
+entry.bind("<End>", lambda event: send_message())
+#changing key
+
+send_btn = ctk.CTkButton(input_frame, text = "Send",
+                         font = ("Arial", 16),
+                         command = send_message)
+
+send_btn.pack(side = "right", padx = 10)
+
+# ---------- Buttons Frame ----------
+buttons_frame = ctk.CTkFrame(app, fg_color="#1C1C1C")
+buttons_frame.pack(fill="x", padx=10, pady=(0, 10))
+
+# "Generate Images" Button
+generate_btn = ctk.CTkButton(buttons_frame, text="Generate Images",
+                             font=("Times New Roman", 16),
+                             command=generate_image)
+generate_btn.pack(side="left", padx=20, pady=10, expand=True)
+
+# "Back" Button
+back_btn = ctk.CTkButton(buttons_frame, text="◀ Back",
+                         font=("Times New Roman", 16),
+                         command=back)
+back_btn.pack(side="left", padx=20, pady=10, expand=True)
+
+# ---------- Weather/Home Frame ----------
+weather_frame = ctk.CTkFrame(app, fg_color="#1C1C1C")
+weather_frame.pack(fill="x", padx=10, pady=(0, 10))
+
+# "Weather Forecast" Button
+weather_location_btn = ctk.CTkButton(weather_frame, text="Weather Forecast",
+                                     font=("Times New Roman", 16),
+                                     command=weather_location)
+weather_location_btn.pack(side="left", padx=20, pady=10, expand=True)
+
+#-----NEW BUTTON
+psych_btn = ctk.CTkButton(weather_frame, text="💡INSITIFY!",
+                          font=("Times New Roman", 16),
+                          command=upload_psych_file)
+psych_btn.pack(side="left", padx=20, pady=10, expand=True)
+
+'''##----ADDING ANOTHER BUTTON NEW NLP
+"Analyze Image" Button
+analyze_btn = ctk.CTkButton(weather_frame, text=" Analyze Image",
+                             font=("Arial", 16), command=analyze_image)
+analyze_btn.pack(side="left", padx=20, pady=10, expand=True)'''
+
+app.mainloop()
+
+-----------------------------
+Yes. Your current project can be upgraded so that:
+
+ - **ChatterBot** handles your existing fixed responses.
+- **OpenAI** provides the actual conversational intelligence.
+- **LangChain** manages prompts/model interaction.
+- **LangGraph** controls a workflow such as `chat → web/tool → psychology analysis → response`.
+- Your existing **CustomTkinter UI** stays mostly unchanged.
+- Your existing weather, image, and psychology modules can remain separate.
+
+ One important point first: **LangChain and LangGraph are free/open-source libraries, but OpenAI API usage is not generally free.** You need an API key and API usage is billed according to the selected model. Current OpenAI documentation lists GPT-5.6 Luna at $0.20/M input tokens and $1.20/M output tokens.  OpenAI Platform  LangGraph itself is an open-source orchestration framework.  LangChain
+
+ If by "free" you mean **zero API cost**, you can instead use LangChain/LangGraph with a local model such as Ollama. If you mean **free to install/use the frameworks**, use OpenAI as below.
+
+ ## 1\. Recommended architecture
+
+ I'd change your project to:
+
+```
+HEX ChatBot
+│
+├── CustomTkinter UI
+│
+├── LangGraph
+│   │
+│   ├── Chat node
+│   │     └── OpenAI
+│   │
+│   ├── Psychology node
+│   │     └── psych_analysis.py
+│   │
+│   └── Tool/Web node
+│
+├── Existing ChatterBot
+│
+├── Image analysis
+│   ├── BLIP
+│   └── CLIP
+│
+└── Weather application
+```
+
+ You don't actually need to throw away your current code.
+
+---
+
+ # 2\. Install the packages
+
+ Create/activate your virtual environment and install:
+
+```
+pip install langchain langgraph langchain-openai openai python-dotenv
+```
+
+ You already have most of the other packages.
+
+ For example:
+
+```
+pip install chatterbot customtkinter transformers torch pillow nltk
+```
+
+ LangChain provides the model/integration abstractions, while LangGraph is intended for stateful workflows and orchestration.  LangChain
+
+---
+
+ # 3\. Create your OpenAI API key
+
+ Create a `.env` file in the same folder as your Python program:
+
+```
+OPENAI_API_KEY=your_api_key_here
+```
+
+ **Do not put the key directly into your Python code.**
+
+ Also add this to `.gitignore`:
+
+```
+.env
+```
+
+ That prevents accidentally uploading your API key to GitHub.
+
+---
+
+ # 4\. Create `ai_brain.py`
+
+ I'd separate the AI logic from your GUI.
+
+ Create:
+
+```
+ai_brain.py
+```
+
+ with:
+
+```
+from typing import TypedDict
+
+from langchain_openai import ChatOpenAI
+from langchain_core.messages import HumanMessage, SystemMessage
+from langgraph.graph import StateGraph, START, END
+from dotenv import load_dotenv
+
+load_dotenv()
+
+class ChatState(TypedDict):
+    user_message: str
+    response: str
+
+llm = ChatOpenAI(
+    model="gpt-5.6-luna",
+    temperature=0.7
+)
+
+def chat_node(state: ChatState):
+    messages = [
+        SystemMessage(
+            content=(
+                "You are HEXBot, a helpful desktop AI assistant. "
+                "Give clear, concise and friendly answers. "
+                "If you do not know something, say so rather than inventing it."
+            )
+        ),
+        HumanMessage(content=state["user_message"])
+    ]
+
+    response = llm.invoke(messages)
+
+    return {
+        "response": response.content
+    }
+
+graph_builder = StateGraph(ChatState)
+
+graph_builder.add_node("chat", chat_node)
+
+graph_builder.add_edge(START, "chat")
+graph_builder.add_edge("chat", END)
+
+graph = graph_builder.compile()
+
+def ask_ai(message):
+    result = graph.invoke({
+        "user_message": message,
+        "response": ""
+    })
+
+    return result["response"]
+```
+
+ That gives you a very simple LangGraph:
+
+```
+START
+  ↓
+chat
+  ↓
+ END
+```
+
+ But now your chatbot can actually reason about messages instead of relying entirely on the `conversation` list.
+
+---
+
+ # 5\. Connect it to your current `send_message()`
+
+ Currently you have:
+
+```
+web_response = handle_web(msg)
+
+if web_response:
+    reply = web_response
+else:
+    reply = chatbot.get_response(msg)
+```
+
+ You can replace it with:
+
+```
+web_response = handle_web(msg)
+
+if web_response:
+    reply = web_response
+else:
+    reply = ask_ai(msg)
+```
+
+ And import the function:
+
+```
+from ai_brain import ask_ai
+```
+
+ So your flow becomes:
+
+```
+User types message
+       ↓
+handle_web()
+       ↓
+Does it look like "open Google"?
+       │
+    yes ──────→ Open website
+       │
+      no
+       ↓
+LangGraph
+       ↓
+LangChain
+       ↓
+OpenAI
+       ↓
+AI response
+       ↓
+CustomTkinter chat
+```
+
+ That's the easiest way to integrate it.
+
+---
+
+ # 6\. What happens to ChatterBot?
+
+ You have:
+
+```
+chatbot = ChatBot("HEXBot")
+trainer = ListTrainer(chatbot)
+```
+
+ and a large:
+
+```
+conversation = [
+    "Hi", "Hello!",
+    ...
+]
+```
+
+ You have two choices.
+
+ ### Option A — Keep ChatterBot
+
+ Use ChatterBot for simple predefined questions and OpenAI for everything else.
+
+ For example:
+
+```
+web_response = handle_web(msg)
+
+if web_response:
+    reply = web_response
+
+else:
+    chatbot_reply = str(chatbot.get_response(msg))
+
+    if chatbot_reply:
+        reply = chatbot_reply
+    else:
+        reply = ask_ai(msg)
+```
+
+ However, there's a problem: ChatterBot will often return _something_, even when it doesn't really know the answer.
+
+ So I would actually recommend **Option B**.
+
+ ### Option B — Replace ChatterBot with LangGraph/OpenAI
+
+ Your existing:
+
+```
+conversation = [...]
+```
+
+ can become system knowledge or a small FAQ/tool.
+
+ Then your architecture becomes:
+
+```
+CustomTkinter
+      ↓
+LangGraph
+      ↓
+ ┌───────────────┐
+ │               │
+AI          Special tools
+ │               │
+OpenAI      Weather
+            Psychology
+            Image analysis
+            Website opening
+```
+
+ This is much easier to extend.
+
+---
+
+ # 7\. The really useful part: LangGraph
+
+ This is where LangGraph becomes worthwhile.
+
+ Instead of having one node:
+
+```
+START → Chat → END
+```
+
+ you can build:
+
+```
+                  ┌───────────────┐
+                  │               │
+                  ↓               │
+User → Classifier → Chat          │
+                  │               │
+                  ├→ Psychology ──┤
+                  │               │
+                  ├→ Weather ─────┤
+                  │               │
+                  └→ Web ─────────┘
+                                  ↓
+                                END
+```
+
+ For example:
+
+```
+from typing import TypedDict
+
+class ChatState(TypedDict):
+    user_message: str
+    intent: str
+    response: str
+```
+
+ Then:
+
+```
+def classify_message(state):
+    message = state["user_message"].lower()
+
+    if any(word in message for word in [
+        "psychology",
+        "psychological",
+        "analyze my text"
+    ]):
+        intent = "psychology"
+
+    elif "weather" in message:
+        intent = "weather"
+
+    elif message.startswith("open "):
+        intent = "web"
+
+    else:
+        intent = "chat"
+
+    return {
+        "intent": intent
+    }
+```
+
+ Then create separate nodes.
+
+---
+
+ # 8\. Your psychology module can become a LangGraph node
+
+ You already have:
+
+```
+def analyze_psychology(text):
+```
+
+ That's perfect.
+
+ You can call it from LangGraph:
+
+```
+def psychology_node(state):
+    result = analyze_psychology(
+        state["user_message"]
+    )
+
+    return {
+        "response": result
+    }
+```
+
+ Then your graph can route:
+
+```
+def route_message(state):
+
+    if state["intent"] == "psychology":
+        return "psychology"
+
+    elif state["intent"] == "weather":
+        return "weather"
+
+    elif state["intent"] == "web":
+        return "web"
+
+    return "chat"
+```
+
+ Conceptually:
+
+```
+                    ┌── psychology
+                    │
+START → classifier ─┼── weather
+                    │
+                    ├── web
+                    │
+                    └── chat
+```
+
+ This is a much better use of LangGraph than simply calling OpenAI once.
+
+---
+
+ # 9\. Your `psych_analysis.py` needs one important change
+
+ Currently you're using:
+
+```
+sentiment_analyzer = pipeline("sentiment-analysis")
+```
+
+ That's okay.
+
+ But don't present the output as a clinical psychological diagnosis.
+
+ For example, your current:
+
+```
+"Possible low mood / emotional distress"
+```
+
+ is reasonable as a linguistic indicator, but I'd change the terminology to something like:
+
+```
+"Text contains words associated with low mood or emotional distress"
+```
+
+ Similarly:
+
+```
+"Signs of anxiety or overthinking"
+```
+
+ could become:
+
+```
+"Text contains language associated with anxiety or worry"
+```
+
+ That makes the feature an **NLP text-pattern analyzer**, rather than claiming that it can determine somebody's psychological condition.
+
+---
+
+ # 10\. You can also let OpenAI explain the analysis
+
+ This is where the combination gets interesting.
+
+ Your existing model can calculate:
+
+```
+Sentiment: NEGATIVE
+Keywords:
+sad
+alone
+tired
+stress
+
+Patterns:
+low mood
+social isolation
+```
+
+ Then OpenAI can turn that into a natural-language explanation.
+
+ For example:
+
+```
+def psychology_explanation(raw_analysis):
+    prompt = f"""
+You are an NLP assistant.
+
+Explain the following text-analysis results in simple,
+non-diagnostic language.
+
+Do not diagnose the person.
+Do not claim certainty about their mental health.
+
+Analysis:
+
+{raw_analysis}
+"""
+
+    response = llm.invoke(prompt)
+
+    return response.content
+```
+
+ Then:
+
+```
+TXT file
+   ↓
+Your NLP model
+   ↓
+Sentiment + keywords + patterns
+   ↓
+LangGraph
+   ↓
+OpenAI
+   ↓
+Readable explanation
+```
+
+ That's considerably more useful than having OpenAI independently "diagnose" the text.
+
+---
+
+ # 11\. You can also give LangGraph memory
+
+ One advantage of using LangGraph is that you can eventually maintain conversation state.
+
+ Instead of:
+
+```
+ask_ai("Hello")
+```
+
+ and then:
+
+```
+ask_ai("What did I just ask?")
+```
+
+ with no context, you can maintain messages.
+
+ For example, conceptually:
+
+```
+messages = [
+    ("system", "You are HEXBot."),
+    ("human", "My name is Alex."),
+    ("assistant", "Nice to meet you, Alex."),
+    ("human", "What's my name?")
+]
+```
+
+ Then the model receives the relevant conversation history.
+
+ For your desktop application, this gives you a much more natural chatbot.
+
+---
+
+ # 12\. Your project structure could become
+
+ I'd reorganize your project like this:
+
+```
+HEXBot/
+│
+├── main.py
+│
+├── ai_brain.py
+├── graph.py
+├── psych_analysis.py
+├── web_tools.py
+├── image_analysis.py
+├── weather.py
+│
+├── .env
+├── .gitignore
+│
+├── db.sqlite3
+│
+├── Image_cat_new.py
+├── Weather_location_json_App_updated.py
+└── nlpapp1.py
+```
+
+ And eventually:
+
+```
+main.py
+```
+
+ should mostly contain your CustomTkinter interface.
+
+ The AI logic shouldn't be mixed into the GUI.
+
+---
+
+ # 13\. An even better architecture for HEXBot
+
+ I'd ultimately build it like this:
+
+```
+                     HEXBot
+                        │
+                        ▼
+                 CustomTkinter
+                        │
+                        ▼
+                   LangGraph
+                        │
+                 Intent Router
+                        │
+       ┌────────────────┼────────────────┐
+       │                │                │
+       ▼                ▼                ▼
+    General          Tools           Analysis
+       │                │                │
+       ▼                ├── Web          ├── Psychology
+    OpenAI              ├── Weather      └── Image
+                        └── Apps
+       │
+       ▼
+   Final Response
+       │
+       ▼
+ CustomTkinter
+```
+
+ This means that when you later add:
+
+ - PDF analysis
+- voice input
+- voice output
+- calculator
+- Wikipedia
+- Google search
+- email
+- calendar
+- database search
+- image understanding
+- document Q&A
+
+ you don't have to rewrite the whole application.
+
+ You simply add another LangGraph node/tool.
+
+---
+
+ ## 14\. About "OpenAI for free"
+
+ There are two different approaches.
+
+ ### Approach 1 — OpenAI API
+
+```
+LangChain
+    ↓
+OpenAI API
+```
+
+ Easy and high quality, but **not zero-cost**. Current OpenAI API pricing is usage-based.  OpenAI Platform
+
+ ### Approach 2 — Completely local
+
+ You can do:
+
+```
+LangChain
+    ↓
+Ollama
+    ↓
+Local LLM
+```
+
+ For example:
+
+```
+HEXBot
+  ↓
+LangGraph
+  ↓
+LangChain
+  ↓
+Ollama
+  ↓
+Local model
+```
+
+ That doesn't require paying an OpenAI API bill, although your computer needs enough RAM/CPU/GPU to run the model.
+
+ So if your goal is specifically:
+
+ > **"I want LangChain + LangGraph + an LLM but I don't want to pay for an API."**
+
+ I'd recommend the **Ollama/local-model route**.
+
+ If your goal is:
+
+ > **"I want to learn LangChain and LangGraph and use OpenAI with my existing project."**
+
+ then use the `ChatOpenAI` approach above.
+
+---
+
+ ## 15\. One thing I would NOT do
+
+ Don't put this directly into your GUI:
+
+```
+llm = ChatOpenAI(...)
+```
+
+ and then build your entire application around it.
+
+ Instead:
+
+```
+main.py
+   ↓
+graph.py
+   ↓
+ai_brain.py
+   ↓
+OpenAI
+```
+
+ That separation will make your project much easier to maintain.
+
+---
+
+ ### The best next step for your exact code
+
+ For **your existing HEXBot**, I would do the migration in **3 stages**:
+
+ 1. **Stage 1:** Add `ChatOpenAI` through LangChain without changing your GUI.
+2. **Stage 2:** Convert your `send_message()` logic into a LangGraph router that handles `chat`, `web`, `psychology`, and `weather`.
+3. **Stage 3:** Add conversation memory and tools so HEXBot becomes an actual agent rather than a ChatterBot with predefined replies.
+
+ The result would be roughly:
+
+```
+User
+ ↓
+CustomTkinter
+ ↓
+LangGraph
+ ↓
+┌──────────────────────────────┐
+│        Intent Router         │
+└──────────────────────────────┘
+ ↓          ↓          ↓
+Chat       Web      Psychology
+ ↓          ↓          ↓
+OpenAI   Browser   Your NLP model
+ ↓          ↓          ↓
+ └──────────┴──────────┘
+            ↓
+       HEXBot response
+            ↓
+       CustomTkinter
+```
+
+ If you want, I can take **the exact code you pasted** and rewrite it into a working `main.py + graph.py + psych_analysis.py + .env` version, while keeping your **dark CustomTkinter interface, Generate Images, Weather Forecast, Back, and INSIGHTIFY buttons** intact.

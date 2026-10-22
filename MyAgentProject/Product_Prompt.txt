@@ -1,0 +1,761 @@
+
+
+ProductId, ProductName, CustomerId, CustomerName, City, Country, Category
+
+Assume you have 50 records and want to use them for analytics, data cleaning, SQL, dashboards, BI, and advanced insights.
+
+1. Basic Data Understanding
+
+Prompt 1 — Dataset Overview
+
+I have a dataset containing 50 records with these columns:
+ProductId, ProductName, CustomerId, CustomerName, City, Country, Category.
+
+Analyze the dataset and explain:
+1. What each column represents
+2. The likely data type of each column
+3. Which columns are dimensions and which are identifiers
+4. What types of business questions this dataset can answer
+5. Any limitations of this dataset for analytics.
+
+2. Data Profiling
+
+Prompt 2 — Complete Data Profile
+
+Perform a complete data profiling analysis on my 50-record dataset containing:
+ProductId, ProductName, CustomerId, CustomerName, City, Country, Category.
+
+Identify:
+- Number of rows and columns
+- Unique products
+- Unique customers
+- Unique cities
+- Unique countries
+- Unique categories
+- Missing values
+- Duplicate records
+- Duplicate ProductIds
+- Duplicate CustomerIds
+- Invalid or suspicious values
+
+Present the results in clear analytical tables.
+
+3. Data Quality
+
+Prompt 3 — Data Cleaning
+
+Act as a senior data-quality analyst.
+
+Clean and validate my 50-record dataset with:
+ProductId, ProductName, CustomerId, CustomerName, City, Country, Category.
+
+Check for:
+- Null values
+- Blank strings
+- Duplicate records
+- Duplicate IDs
+- Inconsistent capitalization
+- Leading/trailing spaces
+- Spelling inconsistencies
+- Invalid country/city combinations
+- Inconsistent category names
+- Product/customer naming inconsistencies.
+
+Create a data-quality report showing Issue, Records Affected, Severity, and Recommended Fix.
+
+4. Product Analytics
+
+Prompt 4 — Product Analysis
+
+Analyze my 50-record dataset from a product perspective.
+
+Columns:
+ProductId, ProductName, CustomerId, CustomerName, City, Country, Category.
+
+Calculate and explain:
+- Total products
+- Product frequency
+- Most frequently occurring products
+- Products with only one occurrence
+- Products by category
+- Category distribution
+- Product concentration
+- Top 10 products
+
+Provide business insights based on the results.
+
+5. Customer Analytics
+
+Prompt 5 — Customer Analysis
+
+Analyze the 50-record dataset from a customer perspective.
+
+Identify:
+- Total unique customers
+- Number of records per customer
+- Most active customers
+- Customers associated with multiple products
+- Customers associated with multiple categories
+- Customers by city
+- Customers by country
+- Customer concentration.
+
+Rank customers from highest to lowest activity and explain the business meaning.
+
+6. Geographic Analytics
+
+Prompt 6 — City & Country Analysis
+
+Perform geographic analytics on my dataset.
+
+Use:
+CustomerId, CustomerName, City, Country, ProductName, Category.
+
+Analyze:
+- Customers by country
+- Customers by city
+- Products by country
+- Categories by country
+- Categories by city
+- Top 10 cities
+- Top countries
+- Geographic concentration.
+
+Create tables suitable for a Power BI or Tableau dashboard.
+
+7. Category Analytics
+
+Prompt 7 — Category Performance
+
+Analyze the Category field in my 50-record dataset.
+
+Determine:
+- Number of unique categories
+- Number of records per category
+- Products within each category
+- Customers within each category
+- Cities and countries represented in each category
+- Most popular category
+- Least represented category
+- Category concentration percentage.
+
+Provide actionable business insights.
+
+8. Product-Customer Relationships
+
+Prompt 8 — Product-Customer Analysis
+
+Analyze relationships between ProductName and CustomerName.
+
+Find:
+- Which customers are associated with which products
+- Most common product-customer combinations
+- Customers with the widest product variety
+- Products associated with the largest number of customers
+- Products with only one customer
+- Customers purchasing/using only one product.
+
+Create a Product × Customer analytical matrix.
+
+9. Customer Segmentation
+
+Prompt 9 — Customer Segmentation
+
+Using only the available fields:
+ProductId, ProductName, CustomerId, CustomerName, City, Country, Category,
+
+segment the 50 customers/records into meaningful groups based on:
+- Product diversity
+- Category diversity
+- Geographic location
+- Activity/frequency.
+
+Explain the segmentation methodology and assign each customer a segment.
+
+10. SQL Analytics
+
+Prompt 10 — Generate SQL Queries
+
+Act as a senior SQL analyst.
+
+Assume my table is named CustomerProductData and contains:
+ProductId, ProductName, CustomerId, CustomerName, City, Country, Category.
+
+Generate 20 SQL analytical queries for my 50-record dataset, ranging from beginner to advanced.
+
+Include queries for:
+- COUNT
+- DISTINCT
+- GROUP BY
+- ORDER BY
+- filtering
+- duplicate detection
+- top products
+- top customers
+- country analysis
+- category analysis
+- product-customer relationships
+- window functions
+- ranking.
+
+Explain what each query does.
+
+11. Power BI Dashboard
+
+Prompt 11 — Power BI Dashboard Design
+
+Design a professional Power BI dashboard for my 50-record dataset.
+
+Columns:
+ProductId, ProductName, CustomerId, CustomerName, City, Country, Category.
+
+Create:
+1. Executive Overview page
+2. Product Analysis page
+3. Customer Analysis page
+4. Geographic Analysis page
+5. Category Analysis page.
+
+For each page specify:
+- KPIs
+- Charts
+- Tables
+- Slicers
+- Filters
+- Drill-throughs
+- Recommended visual types
+- Business questions answered.
+
+12. DAX Analytics
+
+Prompt 12 — DAX Measures
+
+Act as an expert Power BI DAX developer.
+
+For my table CustomerProductData with:
+ProductId, ProductName, CustomerId, CustomerName, City, Country, Category,
+
+create 25 useful DAX measures for analytics.
+
+Include:
+- Total Records
+- Unique Products
+- Unique Customers
+- Unique Countries
+- Unique Cities
+- Unique Categories
+- Product frequency
+- Customer frequency
+- Category percentage
+- Country percentage
+- ranking measures
+- Top Product
+- Top Customer
+- concentration metrics.
+
+Explain each DAX measure.
+
+13. Advanced SQL
+
+Prompt 13 — Advanced SQL Business Questions
+
+Using the table CustomerProductData, create advanced SQL analytics for:
+
+ProductId, ProductName, CustomerId, CustomerName, City, Country, Category.
+
+Answer questions such as:
+- What are the top 10 products?
+- Which customers have the greatest product diversity?
+- Which countries have the greatest category diversity?
+- Which categories have the widest geographic reach?
+- Which products are concentrated in specific countries?
+- Which customers have unusual product/category patterns?
+
+Use CTEs, subqueries, CASE statements, window functions, and ranking where appropriate.
+
+14. Statistical Analysis
+
+Prompt 14 — Statistical Exploration
+
+Perform exploratory statistical analysis on my 50-record categorical dataset.
+
+Analyze:
+ProductName, CustomerName, City, Country, Category.
+
+Calculate frequency distributions, proportions, concentration, diversity, and cross-tabulations.
+
+Identify:
+- Dominant categories
+- Dominant countries
+- Dominant products
+- Customer concentration
+- Geographic concentration
+- Potential outliers or unusual combinations.
+
+Explain the findings in simple business language.
+
+15. Data Visualization
+
+Prompt 15 — Visualization Expert
+
+Act as a senior data-visualization consultant.
+
+For my 50-record dataset containing:
+ProductId, ProductName, CustomerId, CustomerName, City, Country, Category,
+
+recommend the best visualization for every major analytical question.
+
+For each visualization provide:
+- Business question
+- Chart type
+- X-axis
+- Y-axis
+- Legend
+- Filters
+- Why this visualization is appropriate.
+
+Avoid misleading charts and explain any visualization risks.
+
+16. Exploratory Data Analysis
+
+Prompt 16 — EDA Master Analysis
+
+Perform a complete Exploratory Data Analysis on my 50-record dataset.
+
+Follow this sequence:
+
+1. Data structure
+2. Data quality
+3. Univariate analysis
+4. Bivariate analysis
+5. Product analysis
+6. Customer analysis
+7. Category analysis
+8. Geographic analysis
+9. Product-Customer relationships
+10. Product-Country relationships
+11. Customer-Country relationships
+12. Key patterns
+13. Anomalies
+14. Business recommendations.
+
+Summarize the most important findings at the end.
+
+17. Business Intelligence
+
+Prompt 17 — BI Analyst
+
+Act as a senior Business Intelligence analyst.
+
+Analyze my dataset of 50 records containing:
+ProductId, ProductName, CustomerId, CustomerName, City, Country, Category.
+
+Identify at least 15 meaningful business insights.
+
+For every insight provide:
+- Finding
+- Evidence
+- Business interpretation
+- Potential business impact
+- Recommended action.
+
+Separate factual findings from assumptions.
+
+18. Advanced Customer-Product Matrix
+
+Prompt 18 — Relationship Intelligence
+
+Build an advanced relationship analysis between:
+
+CustomerName × ProductName
+CustomerName × Category
+Country × ProductName
+Country × Category
+City × Category.
+
+Identify strong concentrations, unusual combinations, gaps, and dominant relationships.
+
+Create analytical matrices and explain how each matrix could be used for business decision-making.
+
+19. Anomaly Detection
+
+Prompt 19 — Find Anomalies
+
+Act as a data scientist specializing in anomaly detection.
+
+Analyze my 50-record dataset using:
+ProductId, ProductName, CustomerId, CustomerName, City, Country, Category.
+
+Look for:
+- Duplicate IDs
+- Duplicate customer-product combinations
+- Rare products
+- Rare categories
+- Rare countries
+- Unusual customer behavior
+- Unusual geographic combinations
+- Inconsistent naming
+- Suspicious patterns.
+
+Assign each detected anomaly a severity:
+Low, Medium, High.
+
+Explain why each record is considered unusual.
+
+20. Automated Data Dictionary
+
+Prompt 20 — Data Documentation
+
+Create a professional data dictionary for this dataset:
+
+ProductId
+ProductName
+CustomerId
+CustomerName
+City
+Country
+Category
+
+For every field provide:
+- Column name
+- Business definition
+- Data type
+- Example value
+- Expected format
+- Primary/foreign key role
+- Nullability
+- Uniqueness expectation
+- Data-quality rules
+- Analytics use cases.
+
+Format it as a professional documentation table.
+
+21. Executive Dashboard Storytelling
+
+Prompt 21 — Executive Insights
+
+Act as a Chief Data Officer preparing an executive analytics report from my 50-record dataset.
+
+Analyze:
+ProductId, ProductName, CustomerId, CustomerName, City, Country, Category.
+
+Produce:
+
+1. Executive summary
+2. 10 most important KPIs
+3. Top products
+4. Top customers
+5. Geographic highlights
+6. Category highlights
+7. Major patterns
+8. Data-quality concerns
+9. Business opportunities
+10. Recommended next actions.
+
+Keep the final explanation executive-friendly and focused on decisions rather than technical details.
+
+22. End-to-End Analytics Master Prompt
+
+Prompt 22 — Complete Analytics Project
+
+You are an expert Data Analyst, SQL Developer, Power BI Developer, and Business Intelligence Consultant.
+
+I have a dataset containing 50 records with:
+
+ProductId,
+ProductName,
+CustomerId,
+CustomerName,
+City,
+Country,
+Category.
+
+Perform an end-to-end analytics project.
+
+Phase 1: Data understanding
+Phase 2: Data-quality assessment
+Phase 3: Data cleaning recommendations
+Phase 4: Descriptive analytics
+Phase 5: Product analytics
+Phase 6: Customer analytics
+Phase 7: Category analytics
+Phase 8: Geographic analytics
+Phase 9: Relationship analysis
+Phase 10: Anomaly detection
+Phase 11: KPI development
+Phase 12: SQL analytics
+Phase 13: Power BI dashboard design
+Phase 14: DAX measures
+Phase 15: Executive insights.
+
+For every phase provide:
+- Analysis
+- Result
+- Business interpretation
+- Recommended visualization
+- Recommended action.
+
+Do not invent values that are not present in the dataset.
+Clearly distinguish calculated results from assumptions.
+
+23.  Advanced AI Analytics Master Prompt
+
+Prompt 23 — AI Data Analyst
+
+Act as an elite AI-powered Senior Data Analyst and Business Intelligence Architect.
+
+I will provide a dataset containing approximately 50 records with these fields:
+
+ProductId
+ProductName
+CustomerId
+CustomerName
+City
+Country
+Category
+
+Your mission is to extract maximum analytical value from the dataset without inventing information.
+
+Perform the following:
+
+A. DATA DISCOVERY
+- Understand the schema
+- Infer appropriate data types
+- Identify keys
+- Identify dimensions
+- Identify possible relationships
+
+B. DATA QUALITY
+- Missing values
+- Duplicates
+- Invalid IDs
+- Inconsistent names
+- Spelling variations
+- Category inconsistencies
+- Geographic inconsistencies
+
+C. DESCRIPTIVE ANALYTICS
+- Record count
+- Unique products
+- Unique customers
+- Unique cities
+- Unique countries
+- Unique categories
+- Frequency distributions
+- Percentages
+
+D. PRODUCT INTELLIGENCE
+- Product ranking
+- Product frequency
+- Product diversity
+- Product-category relationships
+- Product-country relationships
+- Product-customer relationships
+
+E. CUSTOMER INTELLIGENCE
+- Customer ranking
+- Customer frequency
+- Customer product diversity
+- Customer category diversity
+- Customer geographic distribution
+
+F. GEOGRAPHIC INTELLIGENCE
+- Country ranking
+- City ranking
+- Products by country
+- Categories by country
+- Customers by country
+- Geographic concentration
+
+G. CATEGORY INTELLIGENCE
+- Category ranking
+- Category distribution
+- Products per category
+- Customers per category
+- Geographic reach per category
+
+H. RELATIONSHIP ANALYSIS
+Analyze:
+- Customer × Product
+- Customer × Category
+- Country × Product
+- Country × Category
+- City × Category
+
+I. ANOMALY DETECTION
+Identify unusual, rare, duplicate, inconsistent, or suspicious records.
+
+J. KPI DESIGN
+Recommend the most useful KPIs and explain their formulas.
+
+K. DASHBOARD DESIGN
+Create a complete Power BI/Tableau dashboard specification including:
+- KPI cards
+- Bar charts
+- Donut charts where appropriate
+- Maps
+- Matrix visuals
+- Filters
+- Drill-through
+- Tooltips
+- Executive summary
+
+L. SQL
+Generate advanced SQL queries for the most important analytical questions.
+
+M. DAX
+Generate useful Power BI DAX measures.
+
+N. EXECUTIVE STORY
+Finish with:
+- Top 10 findings
+- Top 5 business opportunities
+- Top 5 data-quality issues
+- Top 5 recommended actions.
+-----------------------------------------------
+
+
+##  20 Innovative Data Analytics Prompts
+
+### 24. AI Business Opportunity Finder
+
+> Act as an AI Business Intelligence Strategist. Analyze my dataset and identify hidden business opportunities that are not immediately obvious. Examine products, customers, categories, cities, countries, and relationships. For every opportunity provide: Evidence, Insight, Business Opportunity, Potential Impact, Confidence Level, and Recommended Action. Do not invent information.
+
+### 25. What-If Scenario Simulator
+
+> Build a What-If Analysis framework for my dataset. Create realistic scenarios such as increasing activity in a specific category, expanding into a new country, increasing product diversity, or improving customer engagement. Explain the assumptions, calculations, expected effects, risks, and KPIs required to monitor each scenario.
+
+### 26. AI Executive Question Generator
+
+> Act as a Chief Data Officer. Analyze my dataset and generate 30 strategic questions an executive should ask after viewing the dashboard. Group them into Product, Customer, Geography, Category, Data Quality, Growth, Risk, and Operations. For each question explain which KPI or visualization should answer it.
+
+### 27. Hidden Pattern Discovery
+
+> Search my dataset for hidden patterns and relationships that a traditional dashboard might miss. Analyze Product × Customer, Customer × Country, Category × Geography, Product × Category, and City × Category. Identify recurring patterns, unusual combinations, concentration points, gaps, and potential explanations. Clearly separate facts from hypotheses.
+
+### 28. Customer Opportunity Matrix
+
+> Create a Customer Opportunity Matrix using frequency, product diversity, category diversity, and geographic information. Classify customers into analytical groups such as high-engagement, emerging, specialized, and low-activity. Explain the methodology and provide appropriate business actions for each group without inventing unavailable metrics.
+
+### 29. Product Portfolio Intelligence
+
+> Act as a Product Strategy Analyst. Evaluate the product portfolio using frequency, customer reach, category relationships, geographic reach, and concentration. Identify products with broad versus narrow reach and create a Product Portfolio Intelligence table showing evidence, interpretation, potential opportunity, and data limitations.
+
+### 30. Geographic Expansion Analyzer
+
+> Analyze my dataset as if I were evaluating geographic expansion opportunities. Compare countries and cities based on customer presence, product diversity, category diversity, and geographic concentration. Identify areas requiring further investigation and explain what additional data would be needed before making an expansion decision.
+
+### 31. AI Dashboard Co-Pilot
+
+> Act as an AI assistant embedded inside a Power BI dashboard. Based on the available dataset, generate natural-language questions users could ask and provide the DAX logic or analytical calculation required to answer each question. Include questions for executives, managers, analysts, and operational users.
+
+### 32. Automated Data Quality Monitor
+
+> Design an automated data-quality monitoring system for my dataset. Define checks for duplicates, missing values, invalid IDs, inconsistent names, category changes, geographic inconsistencies, and unusual record patterns. For each rule provide: Rule, Logic, Severity, Alert Condition, Suggested Fix, and recommended Power BI/Power Automate implementation.
+
+### 33. Data Storytelling Generator
+
+> Transform my analytical results into a compelling data story. Structure the story as: Business Context → Important Discovery → Supporting Evidence → Pattern → Business Meaning → Risk/Opportunity → Recommended Investigation → KPI to Monitor. Keep factual findings separate from interpretation.
+
+### 34. Natural Language SQL Generator
+
+> Act as an AI SQL assistant. Generate 25 natural-language business questions from my dataset and provide the SQL query for each. Start with simple queries and progress to CTEs, subqueries, CASE statements, window functions, ranking, and cross-dimensional analysis. Explain each query in simple language.
+
+### 35. Power BI Drill-Through Intelligence
+
+> Design an advanced Power BI drill-through architecture for my dataset. Create drill-through pages for Product, Customer, Country, City, and Category. For each page specify KPIs, visuals, filters, tooltip information, DAX measures, and business questions answered.
+
+### 36. AI Anomaly Investigation
+
+> Do not simply identify anomalies. Investigate them. For every unusual record or pattern, explain: What is unusual? How frequently does it occur? Which dimensions contribute to the anomaly? What could explain it? What should an analyst verify? Assign investigation priority based only on observable evidence.
+
+### 37. Data-to-Decision Framework
+
+> Convert my dataset into a Data-to-Decision framework. For every important analytical finding provide: Data Point → Pattern → Insight → Business Question → Decision Context → Required Additional Data → Possible Action → KPI for Monitoring. Clearly distinguish what the dataset can prove from what requires additional information.
+
+### 38. Advanced Customer-Product Network
+
+> Model the dataset as a relationship network connecting Customers, Products, Categories, Cities, and Countries. Identify highly connected entities, repeated relationships, isolated entities, clusters, and unusual connections. Explain how this network could be visualized using Power BI, Python, or a graph database.
+
+### 39. Predictive Analytics Readiness Assessment
+
+> Assess whether my current dataset is suitable for predictive analytics. Evaluate whether it contains enough information for customer prediction, product prediction, demand forecasting, churn analysis, segmentation, or anomaly detection. For each use case provide: Feasibility, Required Variables, Current Limitations, Recommended Additional Data, and Suggested ML Approach.
+
+### 40. AI Data Analyst Report Generator
+
+> Act as an autonomous AI Data Analyst. Analyze the entire dataset and produce a professional report containing: Executive Summary, Data Quality, KPIs, Product Insights, Customer Insights, Category Insights, Geographic Insights, Relationship Analysis, Anomalies, Opportunities, Limitations, and Recommended Next Steps. Never fabricate values.
+
+### 41. Dashboard UX Optimization
+
+> Act as a Power BI UX specialist. Design a highly interactive dashboard for this dataset. Optimize the user experience using KPI cards, dynamic titles, slicers, drill-through, bookmarks, tooltips, conditional formatting, navigation buttons, and dynamic measures. Explain the dashboard layout from top to bottom and left to right.
+
+### 42. Management Alert System
+
+> Design an intelligent management alert system based on my dataset. Identify conditions that should trigger alerts, such as unusual concentration, duplicate IDs, rare categories, geographic inconsistencies, sudden relationship changes, or data-quality problems. For each alert define Condition → Severity → Message → Recommended Action → Power BI/Power Automate implementation.
+
+### 43. Data Analyst Interview Challenge
+
+> Turn my dataset into a realistic Data Analyst interview case study. Create 20 interview questions covering Excel, SQL, Python, Power BI, DAX, statistics, data cleaning, visualization, and business intelligence. Provide expected analytical approaches and evaluation criteria for each question.
+
+### 44. Complete AI Analytics Command Center
+
+> Act as an AI Analytics Architect. Design a complete Analytics Command Center around my dataset using SQL + Python + Power BI + DAX + automation. Define the data pipeline, cleaning layer, analytical layer, KPI layer, dashboard layer, alert layer, and executive reporting layer. Explain how information should flow from raw data to business decision.
+
+### 45. Analytics Maturity Roadmap
+
+> Evaluate my current dataset and create a five-stage analytics maturity roadmap:
+>
+> 1. Descriptive Analytics
+> 2. Diagnostic Analytics
+> 3. Predictive Analytics
+> 4. Prescriptive Analytics
+> 5. AI-Augmented Decision Intelligence.
+
+## Bonus:
+
+> **Act as an AI-powered Senior Data Analyst, Data Scientist, SQL Developer, Power BI Architect, DAX Developer, and Business Intelligence Strategist.**
+>
+> Analyze my complete dataset without inventing information.
+>
+> Perform:
+>
+> 1. Data discovery
+> 2. Data profiling
+> 3. Data-quality analysis
+> 4. Data-cleaning recommendations
+> 5. Product intelligence
+> 6. Customer intelligence
+> 7. Category intelligence
+> 8. Geographic intelligence
+> 9. Relationship intelligence
+> 10. Anomaly detection
+> 11. Customer segmentation
+> 12. Opportunity discovery
+> 13. What-if scenarios
+> 14. Predictive analytics readiness
+> 15. Advanced SQL analysis
+> 16. DAX KPI development
+> 17. Power BI dashboard architecture
+> 18. Management alerts
+> 19. Executive data storytelling
+> 20. Data-to-decision recommendations.
+>
+> For every major finding provide:
+> **Finding → Evidence → Calculation → Business Meaning → Opportunity/Risk → Recommended Investigation → KPI → Visualization.**
+>
+> Clearly separate **facts, calculations, assumptions, hypotheses, and recommendations**.
+>
+> Finish with:
+>
+> * Top 10 analytical discoveries
+> * Top 10 questions management should investigate
+> * Top 10 data-quality issues
+> * Top 10 dashboard KPIs
+> * Top 10 automation opportunities
+> * Recommended future data collection
+> * Analytics maturity roadmap
+> * SQL implementation plan
+> * Power BI implementation plan
+> * AI/ML opportunities
+
+

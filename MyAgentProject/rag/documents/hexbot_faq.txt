@@ -1,0 +1,15 @@
+
+
+HEXBot is a desktop AI assistant.
+
+HEXBot uses a local language model through Ollama.
+
+HEXBot can answer general questions and can be extended with tools and retrieval-augmented generation.
+
+HEXBot has a CustomTkinter graphical interface.
+
+HEXBot can include web access, weather functionality, image analysis, and NLP-based text analysis.
+
+The psychology-oriented feature is an NLP text-pattern analysis feature. It should not be interpreted as a medical or psychological diagnosis.
+
+HEXBot's RAG system retrieves relevant information from documents before generating an answer.

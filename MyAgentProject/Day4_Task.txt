@@ -1,0 +1,341 @@
+Yes — **you can absolutely run the Power Automate flow every 5 minutes**. For your Dataverse discount table, use a **Scheduled cloud flow with the Recurrence trigger**.
+
+Your existing workflow already uses the same structure; we only change the recurrence interval from 10 minutes to **5 minutes**. 
+
+## 1. Create the scheduled flow
+
+Go to:
+
+**Power Automate → Create → Scheduled cloud flow**
+
+Use:
+
+**Flow name**
+
+```text
+AutoDiscount_Every5Minutes
+```
+
+For **Starting**, choose the current date/time or leave the suggested start time.
+
+For **Repeat every**:
+
+```text
+5
+```
+
+For the unit:
+
+```text
+Minute
+```
+
+Then click:
+
+**Create**
+
+---
+
+## 2. Check your trigger
+
+You should now have:
+
+### Recurrence
+
+Set:
+
+| Setting   | Value  |
+| --------- | ------ |
+| Frequency | Minute |
+| Interval  | 5      |
+
+So the trigger means:
+
+```text
+Run
+ ↓
+Wait 5 minutes
+ ↓
+Run
+ ↓
+Wait 5 minutes
+ ↓
+Run
+...
+```
+
+Unlike an Instant flow, you **do not click Run every time**.
+
+---
+
+## 3. Add Dataverse — List rows
+
+Click:
+
+**+ New step**
+
+Search:
+
+```text
+Microsoft Dataverse
+```
+
+Select:
+
+**List rows**
+
+Set:
+
+### Table name
+
+Select your table:
+
+```text
+myProductDiscountsnews
+```
+
+or the Dataverse table name shown in your environment.
+
+Your uploaded workflow uses **List rows → myProductDiscounts** as the data retrieval step. 
+
+Leave **Filter rows** empty for now.
+
+That means the flow will process all products.
+
+---
+
+# 4. Add Apply to each
+
+Click:
+
+**+ New step**
+
+Select:
+
+**Control → Apply to each**
+
+For:
+
+### Select an output from previous steps
+
+Choose:
+
+```text
+value
+```
+
+from **List rows**.
+
+You should have:
+
+```text
+Recurrence
+   ↓
+List rows
+   ↓
+Apply to each
+```
+
+---
+
+# 5. Add OriginalPriceNumber
+
+Inside **Apply to each**, click:
+
+**Add an action → Compose**
+
+Rename the Compose action:
+
+```text
+OriginalPriceNumber
+```
+
+Click:
+
+**Expression**
+
+Enter:
+
+```text
+float(items('Apply_to_each')?['cr614_originalprice'])
+```
+
+Click **OK**.
+
+This is the same conversion in your existing documentation. 
+
+---
+
+# 6. Calculate the 10% discount
+
+Add another **Compose** inside the Apply to each.
+
+Rename it:
+
+```text
+FinalPriceCalculated
+```
+
+Expression:
+
+```text
+mul(outputs('OriginalPriceNumber'), 0.9)
+```
+
+Click **OK**.
+
+For example:
+
+```text
+OriginalPrice = 234
+
+234 × 0.9
+     ↓
+210.60
+```
+
+The 10% discount calculation in your uploaded guide uses this exact expression. 
+
+---
+
+# 7. Update Dataverse
+
+Add another action inside **Apply to each**:
+
+**Microsoft Dataverse → Update a row**
+
+Configure:
+
+### Table name
+
+```text
+myProductDiscountsnews
+```
+
+### Row ID
+
+Select the Dataverse primary-key/Row ID value.
+
+If your logical primary-key field is the one from your existing flow:
+
+```text
+cr614_myproductdiscountsid
+```
+
+the expression is:
+
+```text
+items('Apply_to_each')?['cr614_myproductdiscountsid']
+```
+
+**Important:** don't use your `ProductID` as the Row ID. The Dataverse GUID/primary key is required for the update. 
+
+---
+
+# 8. Set FinalPrice
+
+In the **FinalPrice** field, use:
+
+```text
+outputs('FinalPriceCalculated')
+```
+
+So the Update action is essentially:
+
+```text
+Update a row
+
+Table:
+myProductDiscountsnews
+
+Row ID:
+items('Apply_to_each')?['cr614_myproductdiscountsid']
+
+FinalPrice:
+outputs('FinalPriceCalculated')
+```
+
+---
+
+# 9. Your complete flow
+
+You should now have:
+
+```text
+┌──────────────────────────────┐
+│       RECURRENCE             │
+│                              │
+│   Every 5 Minutes            │
+└──────────────┬───────────────┘
+               ↓
+┌──────────────────────────────┐
+│       LIST ROWS              │
+│                              │
+│   Dataverse                  │
+│   myProductDiscountsnews     │
+└──────────────┬───────────────┘
+               ↓
+┌──────────────────────────────┐
+│       APPLY TO EACH          │
+│                              │
+│       value                  │
+│                              │
+│   ┌──────────────────────┐   │
+│   │ OriginalPriceNumber  │   │
+│   │ Compose              │   │
+│   │ float(OriginalPrice) │   │
+│   └──────────┬───────────┘   │
+│              ↓               │
+│   ┌──────────────────────┐   │
+│   │ FinalPriceCalculated │   │
+│   │ Compose              │   │
+│   │ Original × 0.9       │   │
+│   └──────────┬───────────┘   │
+│              ↓               │
+│   ┌──────────────────────┐   │
+│   │ Update a row         │   │
+│   │ FinalPrice           │   │
+│   └──────────────────────┘   │
+└──────────────────────────────┘
+```
+
+## 10. Save and test
+
+Click:
+
+**Save**
+
+Then:
+
+**Test → Manually → Test**
+
+The first execution will run the flow.
+
+After that, because the trigger is:
+
+```text
+Every 5 minutes
+```
+
+Power Automate will automatically start another run every 5 minutes while the flow is turned on.
+
+Your expected calculation is:
+
+| Product   | Original | 10% Discount |      Final |
+| --------- | -------: | -----------: | ---------: |
+| Apple     |   234.00 |        23.40 | **210.60** |
+| Orange    |   134.00 |        13.40 | **120.60** |
+| Pineapple |   200.00 |        20.00 | **180.00** |
+| Grapes    |    56.30 |         5.63 |  **50.67** |
+
+These match the examples in your current Dataverse workflow documentation. 
+
+### One important improvement
+
+Because the flow runs **every 5 minutes**, it will recalculate and update the same products every 5 minutes. If that's what you want, the flow above is fine.
+
+If your real goal is:
+
+> **"Whenever I add a new product, automatically calculate its 10% discount, but don't keep updating the existing products every 5 minutes."**
+
+then I would change the design slightly by adding a **Filter rows** condition so the 5-minute flow processes only products that still need a discount. That avoids unnecessary Dataverse updates.

@@ -1,0 +1,166 @@
+
+
+cd C:\Users\shibu\Desktop\Agentic_AI_Q
+py -3.12 --version
+py -3.12 -m venv .venv
+.venv\Scripts\activate
+python -m pip install --upgrade pip
+
+--------------------------------
+python -m pip install customtkinter chatterbot chatterbot-corpus textblob pillow transformers
+python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+python -m pip install -U langchain langchain-ollama langchain-community langchain-text-splitters
+python -m pip install -U langgraph
+python -m pip install -U chromadb langchain-chroma
+python -m pip install -U langsmith
+------------------------------------------
+python -m spacy download en_core_web_sm
+-----------------------------------------
+start https://ollama.com/download/windows
+-------------------------------------------
+ollama --version
+ollama pull llama3.2:3b
+ollama pull nomic-embed-text
+ollama list
+----------------------------------------------
+
+python -c "import torch; print('PyTorch:', torch.__version__); print('CUDA:', torch.cuda.is_available()); print('GPU:', torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'None')"
+python -c "import transformers; print('Transformers:', transformers.__version__)"
+python -c "from transformers import CLIPProcessor, CLIPModel, BlipProcessor, BlipForConditionalGeneration; print('CLIP + BLIP OK')"
+python -c "import customtkinter; import PIL; print('GUI + PIL OK')"
+-----------------------------------------------------
+python -c "import langchain; print('LangChain:', langchain.__version__)"
+python -c "from langchain_ollama import ChatOllama; print('LangChain + Ollama OK')"
+python -c "import langgraph; print('LangGraph OK')"
+python -c "import chromadb; print('Chroma OK')"
+python -c "from langchain_chroma import Chroma; from langchain_ollama import OllamaEmbeddings; print('RAG imports OK')"
+python -c "import langsmith; print('LangSmith OK')"
+
+---------------------------------------------------------------------
+mkdir rag
+mkdir data
+mkdir data\documents
+type nul > rag\__init__.py
+type nul > rag\ingest.py
+type nul > rag\retriever.py
+type nul > rag\rag_prompt.py
+-------------------------------------------------------------------
+ollama run llama3.2:3b
+----------------------------------------
+python graph.py
+--------------------------------
+python rag\ingest.py
+------------------------------------------------
+python -m pip show langchain
+python -m pip show langchain-ollama
+python -m pip show langgraph
+python -m pip show chromadb
+python -m pip show langchain-chroma
+python -m pip show langsmith
+------------------------------------------------------
+python -m pip freeze > requirements.txt
+------------------------------------------------------
+python chatbot_nlp.py
+-----------------------------
+Test
+
+----------------------------------------------------------
+
+cd C:\Users\shibu\Desktop\Agentic_AI_Q
+.venv\Scripts\activate
+--
+python --version
+py -3.12 --version
+--
+python -c "import torch; print('PyTorch:', torch.__version__); print('CUDA available:', torch.cuda.is_available()); print('CUDA version:', torch.version.cuda); print('GPU:', torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'None')"
+--
+python -c "import transformers; print('Transformers:', transformers.__version__)"
+-----
+python -c "from transformers import CLIPProcessor, CLIPModel, BlipProcessor, BlipForConditionalGeneration; print('CLIP + BLIP OK')"
+-------
+python -c "import torch; import transformers; import customtkinter; import PIL; print('All imports OK')"
+----
+ollama --version
+------
+ollama list
+---------------
+ollama run llama3.2:3b
+----------------------
+Hello, what is HEXBot?
+-------
+/bye
+-----------
+python -c "from langchain_ollama import ChatOllama; print('LangChain + Ollama OK')"
+------------------------------------
+python -c "import langchain; print('LangChain:', langchain.__version__)"
+-------------------
+python -c "import langgraph; print('LangGraph OK')"
+------------
+python graph.py
+------------------
+ollama run nomic-embed-text "Hello, this is a test."
+--------------------------
+python -m pip show langchain
+python -m pip show langchain-ollama
+python -m pip show chromadb
+-----------------------
+python -c "import chromadb; print('Chroma OK')"
+-----------------------------------
+python -c "from langchain_chroma import Chroma; from langchain_ollama import OllamaEmbeddings; print('RAG imports OK')"
+------------
+python rag\ingest.py
+---------------------
+python -m rag.rag_prompt
+-------------------------
+python graph.py
+-----------------------------
+python chatbot_nlp.py
+-----------------------------------
+python -c "import spacy; print('spaCy:', spacy.__version__)"
+-------------------------
+python -c "import customtkinter; print('CustomTkinter OK')"
+-------------------------
+python -c "from PIL import Image; print('Pillow OK')"
+--------------------
+python -c "import nltk; print('NLTK OK')"
+----------------------------
+python -c "import textblob; print('TextBlob OK')"
+-------------------------------
+python -c "import chatterbot; print('ChatterBot OK')"
+--------------------
+python -c "import chatterbot; print('ChatterBot OK')"
+-------------
+python -m pip check
+---------------
+python -m pip freeze
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

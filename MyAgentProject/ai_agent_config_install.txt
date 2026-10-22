@@ -1,0 +1,1322 @@
+Microsoft Windows [Version 10.0.26200.9457]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\shibu\Desktop\Agentic_AI_Q>py -3.12 --version
+Python 3.12.5
+
+C:\Users\shibu\Desktop\Agentic_AI_Q>py -3.12 -m venv .venv
+
+C:\Users\shibu\Desktop\Agentic_AI_Q>.venv\Scripts\activate
+
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>python -m pip install --upgrade pip
+Requirement already satisfied: pip in c:\users\shibu\desktop\agentic_ai_q\.venv\lib\site-packages (24.2)
+Collecting pip
+  Downloading pip-26.2.1-py3-none-any.whl.metadata (4.6 kB)
+Downloading pip-26.2.1-py3-none-any.whl (1.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 5.5 MB/s eta 0:00:00
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.2
+    Uninstalling pip-24.2:
+      Successfully uninstalled pip-24.2
+Successfully installed pip-26.2.1
+
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>python --version
+Python 3.12.5
+
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>python -m pip install customtkinter chatterbot chatterbot-corpus textblob torch pillow transformers
+Collecting customtkinter
+  Using cached customtkinter-6.0.0-py3-none-any.whl.metadata (698 bytes)
+Collecting chatterbot
+  Downloading chatterbot-1.2.15-py3-none-any.whl.metadata (7.2 kB)
+Collecting chatterbot-corpus
+  Downloading chatterbot_corpus-1.3.3-py2.py3-none-any.whl.metadata (3.3 kB)
+Collecting textblob
+  Downloading textblob-0.20.1-py3-none-any.whl.metadata (4.0 kB)
+Collecting torch
+  Downloading torch-2.14.0-cp312-cp312-win_amd64.whl.metadata (38 kB)
+Collecting pillow
+  Downloading pillow-12.3.0-cp312-cp312-win_amd64.whl.metadata (9.3 kB)
+Collecting transformers
+  Downloading transformers-5.17.0-py3-none-any.whl.metadata (32 kB)
+Collecting darkdetect (from customtkinter)
+  Using cached darkdetect-0.8.0-py3-none-any.whl.metadata (3.6 kB)
+Collecting packaging (from customtkinter)
+  Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting mathparse<0.3,>=0.2 (from chatterbot)
+  Downloading mathparse-0.2.9-py3-none-any.whl.metadata (5.2 kB)
+Collecting python-dateutil<2.10,>=2.9 (from chatterbot)
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting sqlalchemy<2.1,>=2.0 (from chatterbot)
+  Downloading sqlalchemy-2.0.54-cp312-cp312-win_amd64.whl.metadata (9.9 kB)
+Collecting spacy<3.9,>=3.8 (from chatterbot)
+  Downloading spacy-3.8.16-cp312-cp312-win_amd64.whl.metadata (28 kB)
+Collecting tqdm (from chatterbot)
+  Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+Collecting six>=1.5 (from python-dateutil<2.10,>=2.9->chatterbot)
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting spacy-legacy<3.1.0,>=3.0.11 (from spacy<3.9,>=3.8->chatterbot)
+  Downloading spacy_legacy-3.0.12-py2.py3-none-any.whl.metadata (2.8 kB)
+Collecting spacy-loggers<2.0.0,>=1.0.0 (from spacy<3.9,>=3.8->chatterbot)
+  Downloading spacy_loggers-1.0.5-py3-none-any.whl.metadata (23 kB)
+Collecting murmurhash<1.1.0,>=0.28.0 (from spacy<3.9,>=3.8->chatterbot)
+  Downloading murmurhash-1.0.15-cp312-cp312-win_amd64.whl.metadata (2.3 kB)
+Collecting cymem<2.1.0,>=2.0.2 (from spacy<3.9,>=3.8->chatterbot)
+  Downloading cymem-2.0.13-cp312-cp312-win_amd64.whl.metadata (9.9 kB)
+Collecting preshed<3.1.0,>=3.0.2 (from spacy<3.9,>=3.8->chatterbot)
+  Downloading preshed-3.0.13-cp312-cp312-win_amd64.whl.metadata (5.4 kB)
+Collecting thinc<8.4.0,>=8.3.12 (from spacy<3.9,>=3.8->chatterbot)
+  Downloading thinc-8.3.13-cp312-cp312-win_amd64.whl.metadata (15 kB)
+Collecting wasabi<1.2.0,>=0.9.1 (from spacy<3.9,>=3.8->chatterbot)
+  Downloading wasabi-1.1.3-py3-none-any.whl.metadata (28 kB)
+Collecting srsly<3.0.0,>=2.5.3 (from spacy<3.9,>=3.8->chatterbot)
+  Downloading srsly-2.5.3-cp312-cp312-win_amd64.whl.metadata (20 kB)
+Collecting catalogue<2.1.0,>=2.0.6 (from spacy<3.9,>=3.8->chatterbot)
+  Downloading catalogue-2.0.10-py3-none-any.whl.metadata (14 kB)
+Collecting weasel<2.0.0,>=1.0.0 (from spacy<3.9,>=3.8->chatterbot)
+  Downloading weasel-1.0.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting confection<2.0.0,>=1.3.2 (from spacy<3.9,>=3.8->chatterbot)
+  Downloading confection-1.3.3-py3-none-any.whl.metadata (19 kB)
+Collecting typer<1.0.0,>=0.3.0 (from spacy<3.9,>=3.8->chatterbot)
+  Downloading typer-0.27.2-py3-none-any.whl.metadata (16 kB)
+Collecting click<9.0.0,>=8.2.1 (from spacy<3.9,>=3.8->chatterbot)
+  Using cached click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting numpy>=1.19.0 (from spacy<3.9,>=3.8->chatterbot)
+  Downloading numpy-2.5.3-cp312-cp312-win_amd64.whl.metadata (6.6 kB)
+Collecting requests<3.0.0,>=2.13.0 (from spacy<3.9,>=3.8->chatterbot)
+  Using cached requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting pydantic<3.0.0,>=2.0.0 (from spacy<3.9,>=3.8->chatterbot)
+  Using cached pydantic-2.13.5-py3-none-any.whl.metadata (110 kB)
+Collecting jinja2 (from spacy<3.9,>=3.8->chatterbot)
+  Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting setuptools (from spacy<3.9,>=3.8->chatterbot)
+  Using cached setuptools-84.0.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting annotated-types>=0.6.0 (from pydantic<3.0.0,>=2.0.0->spacy<3.9,>=3.8->chatterbot)
+  Using cached annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.46.5 (from pydantic<3.0.0,>=2.0.0->spacy<3.9,>=3.8->chatterbot)
+  Downloading pydantic_core-2.46.5-cp312-cp312-win_amd64.whl.metadata (6.7 kB)
+Collecting typing-extensions>=4.14.1 (from pydantic<3.0.0,>=2.0.0->spacy<3.9,>=3.8->chatterbot)
+  Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting typing-inspection>=0.4.2 (from pydantic<3.0.0,>=2.0.0->spacy<3.9,>=3.8->chatterbot)
+  Using cached typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+Collecting charset_normalizer<4,>=2 (from requests<3.0.0,>=2.13.0->spacy<3.9,>=3.8->chatterbot)
+  Downloading charset_normalizer-3.5.1-cp312-cp312-win_amd64.whl.metadata (46 kB)
+Collecting idna<4,>=2.5 (from requests<3.0.0,>=2.13.0->spacy<3.9,>=3.8->chatterbot)
+  Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting urllib3<3,>=1.26 (from requests<3.0.0,>=2.13.0->spacy<3.9,>=3.8->chatterbot)
+  Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting certifi>=2023.5.7 (from requests<3.0.0,>=2.13.0->spacy<3.9,>=3.8->chatterbot)
+  Using cached certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+Collecting greenlet>=1 (from sqlalchemy<2.1,>=2.0->chatterbot)
+  Downloading greenlet-3.5.6-cp312-cp312-win_amd64.whl.metadata (3.9 kB)
+Collecting blis<1.4.0,>=1.3.0 (from thinc<8.4.0,>=8.3.12->spacy<3.9,>=3.8->chatterbot)
+  Downloading blis-1.3.3-cp312-cp312-win_amd64.whl.metadata (7.7 kB)
+Collecting colorama (from tqdm->chatterbot)
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting shellingham>=1.3.0 (from typer<1.0.0,>=0.3.0->spacy<3.9,>=3.8->chatterbot)
+  Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+Collecting rich>=13.8.0 (from typer<1.0.0,>=0.3.0->spacy<3.9,>=3.8->chatterbot)
+  Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+Collecting annotated-doc>=0.0.2 (from typer<1.0.0,>=0.3.0->spacy<3.9,>=3.8->chatterbot)
+  Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+Collecting cloudpathlib>=0.7.0 (from weasel<2.0.0,>=1.0.0->spacy<3.9,>=3.8->chatterbot)
+  Downloading cloudpathlib-0.25.0-py3-none-any.whl.metadata (16 kB)
+Collecting smart-open>=5.2.1 (from weasel<2.0.0,>=1.0.0->spacy<3.9,>=3.8->chatterbot)
+  Downloading smart_open-8.0.1-py3-none-any.whl.metadata (24 kB)
+Collecting httpx>=0.24.0 (from weasel<2.0.0,>=1.0.0->spacy<3.9,>=3.8->chatterbot)
+  Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting nltk>=3.9 (from textblob)
+  Downloading nltk-3.10.3-py3-none-any.whl.metadata (3.2 kB)
+Collecting filelock (from torch)
+  Downloading filelock-4.0.1-py3-none-any.whl.metadata (2.0 kB)
+Collecting sympy>=1.13.3 (from torch)
+  Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Collecting networkx>=2.5.1 (from torch)
+  Downloading networkx-3.7-py3-none-any.whl.metadata (6.7 kB)
+Collecting fsspec>=0.8.5 (from torch)
+  Downloading fsspec-2026.9.0-py3-none-any.whl.metadata (10 kB)
+Collecting huggingface-hub<2.0,>=1.5.0 (from transformers)
+  Downloading huggingface_hub-1.32.0-py3-none-any.whl.metadata (16 kB)
+Collecting pyyaml>=5.1 (from transformers)
+  Downloading pyyaml-6.0.3-cp312-cp312-win_amd64.whl.metadata (2.4 kB)
+Collecting regex>=2025.10.22 (from transformers)
+  Downloading regex-2026.9.10-cp312-cp312-win_amd64.whl.metadata (41 kB)
+Collecting tokenizers<0.24.0,>=0.23.1 (from transformers)
+  Downloading tokenizers-0.23.2-cp310-abi3-win_amd64.whl.metadata (10 kB)
+Collecting safetensors>=0.8.0 (from transformers)
+  Downloading safetensors-0.8.0-cp310-abi3-win_amd64.whl.metadata (4.2 kB)
+Collecting hf-xet<2.0.0,>=1.5.2 (from huggingface-hub<2.0,>=1.5.0->transformers)
+  Downloading hf_xet-1.6.0-cp38-abi3-win_amd64.whl.metadata (4.9 kB)
+Collecting anyio (from httpx>=0.24.0->weasel<2.0.0,>=1.0.0->spacy<3.9,>=3.8->chatterbot)
+  Using cached anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+Collecting httpcore==1.* (from httpx>=0.24.0->weasel<2.0.0,>=1.0.0->spacy<3.9,>=3.8->chatterbot)
+  Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting h11>=0.16 (from httpcore==1.*->httpx>=0.24.0->weasel<2.0.0,>=1.0.0->spacy<3.9,>=3.8->chatterbot)
+  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting defusedxml (from nltk>=3.9->textblob)
+  Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+Collecting joblib (from nltk>=3.9->textblob)
+  Downloading joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting markdown-it-py>=2.2.0 (from rich>=13.8.0->typer<1.0.0,>=0.3.0->spacy<3.9,>=3.8->chatterbot)
+  Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich>=13.8.0->typer<1.0.0,>=0.3.0->spacy<3.9,>=3.8->chatterbot)
+  Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=13.8.0->typer<1.0.0,>=0.3.0->spacy<3.9,>=3.8->chatterbot)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting wrapt (from smart-open>=5.2.1->weasel<2.0.0,>=1.0.0->spacy<3.9,>=3.8->chatterbot)
+  Downloading wrapt-2.4.1-cp312-cp312-win_amd64.whl.metadata (7.6 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch)
+  Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting MarkupSafe>=2.0 (from jinja2->spacy<3.9,>=3.8->chatterbot)
+  Downloading markupsafe-3.0.3-cp312-cp312-win_amd64.whl.metadata (2.8 kB)
+Collecting cloudpickle>=3.0 (from joblib->nltk>=3.9->textblob)
+  Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+Using cached customtkinter-6.0.0-py3-none-any.whl (302 kB)
+Downloading chatterbot-1.2.15-py3-none-any.whl (97 kB)
+Downloading mathparse-0.2.9-py3-none-any.whl (22 kB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading spacy-3.8.16-cp312-cp312-win_amd64.whl (15.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.2/15.2 MB 4.3 MB/s  0:00:03
+Downloading catalogue-2.0.10-py3-none-any.whl (17 kB)
+Using cached click-8.5.0-py3-none-any.whl (125 kB)
+Downloading confection-1.3.3-py3-none-any.whl (35 kB)
+Downloading cymem-2.0.13-cp312-cp312-win_amd64.whl (40 kB)
+Downloading murmurhash-1.0.15-cp312-cp312-win_amd64.whl (25 kB)
+Downloading preshed-3.0.13-cp312-cp312-win_amd64.whl (122 kB)
+Using cached pydantic-2.13.5-py3-none-any.whl (472 kB)
+Downloading pydantic_core-2.46.5-cp312-cp312-win_amd64.whl (2.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 4.9 MB/s  0:00:00
+Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+Downloading charset_normalizer-3.5.1-cp312-cp312-win_amd64.whl (200 kB)
+Downloading idna-3.20-py3-none-any.whl (69 kB)
+Downloading spacy_legacy-3.0.12-py2.py3-none-any.whl (29 kB)
+Downloading spacy_loggers-1.0.5-py3-none-any.whl (22 kB)
+Downloading sqlalchemy-2.0.54-cp312-cp312-win_amd64.whl (2.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 5.3 MB/s  0:00:00
+Downloading srsly-2.5.3-cp312-cp312-win_amd64.whl (652 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 652.5/652.5 kB 3.5 MB/s  0:00:00
+Downloading thinc-8.3.13-cp312-cp312-win_amd64.whl (1.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 4.7 MB/s  0:00:00
+Downloading blis-1.3.3-cp312-cp312-win_amd64.whl (6.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.2/6.2 MB 4.3 MB/s  0:00:01
+Downloading numpy-2.5.3-cp312-cp312-win_amd64.whl (12.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.6/12.6 MB 4.0 MB/s  0:00:03
+Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+Downloading typer-0.27.2-py3-none-any.whl (123 kB)
+Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+Downloading wasabi-1.1.3-py3-none-any.whl (27 kB)
+Downloading weasel-1.0.0-py3-none-any.whl (50 kB)
+Downloading chatterbot_corpus-1.3.3-py2.py3-none-any.whl (345 kB)
+Downloading textblob-0.20.1-py3-none-any.whl (624 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 625.0/625.0 kB 3.9 MB/s  0:00:00
+Downloading torch-2.14.0-cp312-cp312-win_amd64.whl (124.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 124.1/124.1 MB 3.8 MB/s  0:00:32
+Downloading pillow-12.3.0-cp312-cp312-win_amd64.whl (7.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.2/7.2 MB 2.4 MB/s  0:00:03
+Downloading transformers-5.17.0-py3-none-any.whl (12.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 2.8 MB/s  0:00:04
+Downloading huggingface_hub-1.32.0-py3-none-any.whl (842 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 842.9/842.9 kB 2.3 MB/s  0:00:00
+Downloading hf_xet-1.6.0-cp38-abi3-win_amd64.whl (4.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.0/4.0 MB 2.3 MB/s  0:00:01
+Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+Downloading tokenizers-0.23.2-cp310-abi3-win_amd64.whl (2.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.9/2.9 MB 2.8 MB/s  0:00:00
+Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+Using cached annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Using cached certifi-2026.7.22-py3-none-any.whl (136 kB)
+Downloading cloudpathlib-0.25.0-py3-none-any.whl (66 kB)
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Downloading filelock-4.0.1-py3-none-any.whl (106 kB)
+Downloading fsspec-2026.9.0-py3-none-any.whl (221 kB)
+Downloading greenlet-3.5.6-cp312-cp312-win_amd64.whl (324 kB)
+Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading networkx-3.7-py3-none-any.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 2.4 MB/s  0:00:00
+Downloading nltk-3.10.3-py3-none-any.whl (1.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 2.6 MB/s  0:00:00
+Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Downloading pyyaml-6.0.3-cp312-cp312-win_amd64.whl (154 kB)
+Downloading regex-2026.9.10-cp312-cp312-win_amd64.whl (277 kB)
+Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 2.2 MB/s  0:00:00
+Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading safetensors-0.8.0-cp310-abi3-win_amd64.whl (355 kB)
+Using cached setuptools-84.0.0-py3-none-any.whl (818 kB)
+Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading smart_open-8.0.1-py3-none-any.whl (73 kB)
+Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 2.3 MB/s  0:00:02
+Using cached mpmath-1.3.0-py3-none-any.whl (536 kB)
+Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Using cached typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+Using cached anyio-4.15.1-py3-none-any.whl (132 kB)
+Using cached darkdetect-0.8.0-py3-none-any.whl (9.0 kB)
+Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading markupsafe-3.0.3-cp312-cp312-win_amd64.whl (15 kB)
+Downloading joblib-1.6.0-py3-none-any.whl (306 kB)
+Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+Downloading wrapt-2.4.1-cp312-cp312-win_amd64.whl (98 kB)
+Installing collected packages: mpmath, wrapt, urllib3, typing-extensions, sympy, spacy-loggers, spacy-legacy, six, shellingham, setuptools, safetensors, regex, pyyaml, pygments, pillow, packaging, numpy, networkx, murmurhash, mdurl, mathparse, MarkupSafe, idna, hf-xet, h11, greenlet, fsspec, filelock, defusedxml, darkdetect, cymem, confection, colorama, cloudpickle, cloudpathlib, click, chatterbot-corpus, charset_normalizer, certifi, catalogue, annotated-types, annotated-doc, wasabi, typing-inspection, tqdm, srsly, sqlalchemy, smart-open, requests, python-dateutil, pydantic-core, preshed, markdown-it-py, joblib, jinja2, httpcore, customtkinter, blis, anyio, torch, rich, pydantic, nltk, httpx, typer, thinc, textblob, huggingface-hub, weasel, tokenizers, transformers, spacy, chatterbot
+Successfully installed MarkupSafe-3.0.3 annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 blis-1.3.3 catalogue-2.0.10 certifi-2026.7.22 charset_normalizer-3.5.1 chatterbot-1.2.15 chatterbot-corpus-1.3.3 click-8.5.0 cloudpathlib-0.25.0 cloudpickle-3.1.2 colorama-0.4.6 confection-1.3.3 customtkinter-6.0.0 cymem-2.0.13 darkdetect-0.8.0 defusedxml-0.7.1 filelock-4.0.1 fsspec-2026.9.0 greenlet-3.5.6 h11-0.16.0 hf-xet-1.6.0 httpcore-1.0.9 httpx-0.28.1 huggingface-hub-1.32.0 idna-3.20 jinja2-3.1.6 joblib-1.6.0 markdown-it-py-4.2.0 mathparse-0.2.9 mdurl-0.1.2 mpmath-1.3.0 murmurhash-1.0.15 networkx-3.7 nltk-3.10.3 numpy-2.5.3 packaging-26.3 pillow-12.3.0 preshed-3.0.13 pydantic-2.13.5 pydantic-core-2.46.5 pygments-2.21.0 python-dateutil-2.9.0.post0 pyyaml-6.0.3 regex-2026.9.10 requests-2.34.2 rich-15.0.0 safetensors-0.8.0 setuptools-84.0.0 shellingham-1.5.4 six-1.17.0 smart-open-8.0.1 spacy-3.8.16 spacy-legacy-3.0.12 spacy-loggers-1.0.5 sqlalchemy-2.0.54 srsly-2.5.3 sympy-1.14.0 textblob-0.20.1 thinc-8.3.13 tokenizers-0.23.2 torch-2.14.0 tqdm-4.70.1 transformers-5.17.0 typer-0.27.2 typing-extensions-4.16.0 typing-inspection-0.4.4 urllib3-2.8.0 wasabi-1.1.3 weasel-1.0.0 wrapt-2.4.1
+
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>nvidia-smi
+Wed Sep 23 11:49:24 2026
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 572.16                 Driver Version: 572.16         CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 4060 ...  WDDM  |   00000000:01:00.0 Off |                  N/A |
+| N/A   38C    P8              3W /   70W |      96MiB /   8188MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A            5100    C+G   ...s\Win64\EpicGamesLauncher.exe      N/A      |
+|    0   N/A  N/A           12128    C+G   ...ayRenderer-Win64-Shipping.exe      N/A      |
++-----------------------------------------------------------------------------------------+
+
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+Looking in indexes: https://download.pytorch.org/whl/cu128
+Requirement already satisfied: torch in .\.venv\Lib\site-packages (2.14.0)
+Collecting torchvision
+  Downloading torchvision-0.26.0%2Bcu128-cp312-cp312-win_amd64.whl.metadata (5.6 kB)
+Collecting torchaudio
+  Downloading torchaudio-2.11.0%2Bcu128-cp312-cp312-win_amd64.whl.metadata (7.0 kB)
+Requirement already satisfied: filelock in .\.venv\Lib\site-packages (from torch) (4.0.1)
+Requirement already satisfied: typing-extensions>=4.10.0 in .\.venv\Lib\site-packages (from torch) (4.16.0)
+Requirement already satisfied: setuptools>=77.0.3 in .\.venv\Lib\site-packages (from torch) (84.0.0)
+Requirement already satisfied: sympy>=1.13.3 in .\.venv\Lib\site-packages (from torch) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in .\.venv\Lib\site-packages (from torch) (3.7)
+Requirement already satisfied: jinja2 in .\.venv\Lib\site-packages (from torch) (3.1.6)
+Requirement already satisfied: fsspec>=0.8.5 in .\.venv\Lib\site-packages (from torch) (2026.9.0)
+Requirement already satisfied: numpy in .\.venv\Lib\site-packages (from torchvision) (2.5.3)
+Collecting torch
+  Downloading torch-2.11.0%2Bcu128-cp312-cp312-win_amd64.whl.metadata (29 kB)
+Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in .\.venv\Lib\site-packages (from torchvision) (12.3.0)
+Collecting setuptools<82 (from torch)
+  Downloading setuptools-78.1.0-py3-none-any.whl.metadata (6.6 kB)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in .\.venv\Lib\site-packages (from sympy>=1.13.3->torch) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in .\.venv\Lib\site-packages (from jinja2->torch) (3.0.3)
+Downloading torchvision-0.26.0%2Bcu128-cp312-cp312-win_amd64.whl (9.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.6/9.6 MB 3.8 MB/s  0:00:02
+Downloading torch-2.11.0%2Bcu128-cp312-cp312-win_amd64.whl (2753.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.8/2.8 GB 8.0 MB/s  0:08:58
+Downloading setuptools-78.1.0-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 10.6 MB/s  0:00:00
+Downloading torchaudio-2.11.0%2Bcu128-cp312-cp312-win_amd64.whl (1.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 9.0 MB/s  0:00:00
+Installing collected packages: torchaudio, setuptools, torch, torchvision
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 84.0.0
+    Uninstalling setuptools-84.0.0:
+      Successfully uninstalled setuptools-84.0.0
+  Attempting uninstall: torch
+    Found existing installation: torch 2.14.0
+    Uninstalling torch-2.14.0:
+      Successfully uninstalled torch-2.14.0
+Successfully installed setuptools-78.1.0 torch-2.11.0+cu128 torchaudio-2.11.0+cu128 torchvision-0.26.0+cu128
+
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>python -c "import torch; print('PyTorch:', torch.__version__); print('CUDA available:', torch.cuda.is_available()); print('CUDA version:', torch.version.cuda); print('GPU:', torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'None')"
+PyTorch: 2.11.0+cu128
+CUDA available: True
+CUDA version: 12.8
+GPU: NVIDIA GeForce RTX 4060 Laptop GPU
+
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>python -c "import transformers; print('Transformers:', transformers.__version__)"
+Transformers: 5.17.0
+
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>python -c "from transformers import CLIPProcessor, CLIPModel, BlipProcessor, BlipForConditionalGeneration; print('CLIP + BLIP imports OK')"
+CLIP + BLIP imports OK
+
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>ollama --version
+'ollama' is not recognized as an internal or external command,
+operable program or batch file.
+
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>
+Microsoft Windows [Version 10.0.26200.9457]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\shibu>cd C:\Users\shibu\Desktop\Agentic_AI_Q
+
+C:\Users\shibu\Desktop\Agentic_AI_Q>.venv\Scripts\activate
+
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>ollama --version
+ollama version is 0.34.3
+
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>ollama pull llama3.2:3b
+pulling manifest
+pulling dde5aa3fc5ff: 100% ▕██████████████████████████████████████████████████████████████████████████████████████████████▏ 2.0 GB
+verifying sha256 digest
+writing manifest
+success
+
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>ollama list
+NAME           ID              SIZE      MODIFIED
+llama3.2:3b    a80c4f17acd5    2.0 GB    3 minutes ago
+
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>ollama run llama3.2:3b
+>>> Hello! You are going to be the local AI brain of my HEXBot project. Introduce yourself.
+Hello! I'm delighted to be the local AI brain for your HEXBot project. My name is HEXbotAI (or HB-AI for short), and I'll be your trusted companion on
+this coding journey.
+
+I'm a specialized AI designed to assist you in automating tasks, providing insights, and simplifying the HEXBot experience. My capabilities include:
+
+1. **Language Understanding**: I can comprehend HEX code, understand the context, and provide relevant suggestions.
+2. **Task Automation**: I can help with automating tasks, such as sending and receiving messages, controlling devices, and more.
+3. **Error Detection**: I can identify potential errors in your code and suggest corrections.
+4. **Knowledge Base**: I have a vast knowledge base related to HEXBot, including tutorials, examples, and best practices.
+
+My primary goal is to make your HEXBot experience more efficient, enjoyable, and rewarding. I'm here to help you overcome any challenges, answer your
+questions, and provide guidance whenever you need it.
+
+So, what's your first task or question? Let's get started!
+
+>>> What is LangGraph and what is it used for?
+LangGraph is a low-level, graph-based representation of language, specifically designed for programming languages like HEX (and many others). It's a
+data structure that maps symbols (characters, keywords, identifiers, etc.) to their corresponding meanings, relationships, and context.
+
+LangGraph is used to model and analyze the structure and semantics of programming languages. It provides a robust framework for:
+
+1. **Lexical Analysis**: LangGraph helps with tokenization, syntax analysis, and error detection by defining the relationships between symbols, such
+as operators, keywords, and identifiers.
+2. **Syntax Analysis**: By representing the relationships between symbols, LangGraph enables the analysis of syntactic structures, such as grammar
+rules, parsing, and syntax highlighting.
+3. **Semantic Analysis**: LangGraph helps analyze the meaning of symbols and expressions, including type checking, scoping, and semantic rules.
+4. **Code Analysis**: LangGraph can be used to analyze code for various purposes, such as code optimization, debugging, and code completion.
+
+In the context of HEXBot, LangGraph can be used to:
+
+1. **Improve syntax highlighting**: By analyzing the structure of HEX code, LangGraph can help highlight keywords, identifiers, and symbols, making it
+easier to read and write code.
+2. **Enable code completion**: LangGraph can provide suggestions for HEX code completions, reducing the need for manual typing.
+3. **Detect errors**: LangGraph can help identify syntax errors, warnings, and potential issues in HEX code, making it easier to debug and maintain
+the code.
+4. **Optimize code**: By analyzing the structure and semantics of HEX code, LangGraph can help identify opportunities for optimization, such as
+reducing code size or improving performance.
+
+Overall, LangGraph is a powerful tool for working with programming languages, and its application in HEXBot can significantly enhance the user
+experience and code quality.
+
+>>> /bye
+
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>pip install -U langchain langchain-ollama
+Collecting langchain
+  Downloading langchain-1.4.2-py3-none-any.whl.metadata (6.2 kB)
+Collecting langchain-ollama
+  Downloading langchain_ollama-1.1.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting langchain-core<2.0.0,>=1.6.3 (from langchain)
+  Downloading langchain_core-1.6.4-py3-none-any.whl.metadata (4.8 kB)
+Collecting langgraph<1.3.0,>=1.2.11 (from langchain)
+  Downloading langgraph-1.2.12-py3-none-any.whl.metadata (4.9 kB)
+Requirement already satisfied: pydantic<3.0.0,>=2.7.4 in .\.venv\Lib\site-packages (from langchain) (2.13.5)
+Requirement already satisfied: httpx<1.0.0,>=0.23.0 in .\.venv\Lib\site-packages (from langchain-core<2.0.0,>=1.6.3->langchain) (0.28.1)
+Collecting jsonpatch<2.0.0,>=1.33.0 (from langchain-core<2.0.0,>=1.6.3->langchain)
+  Downloading jsonpatch-1.33-py2.py3-none-any.whl.metadata (3.0 kB)
+Collecting langchain-protocol>=0.0.17 (from langchain-core<2.0.0,>=1.6.3->langchain)
+  Downloading langchain_protocol-0.0.19-py3-none-any.whl.metadata (2.4 kB)
+Collecting langsmith<1.0.0,>=0.3.45 (from langchain-core<2.0.0,>=1.6.3->langchain)
+  Downloading langsmith-0.14.0-py3-none-any.whl.metadata (22 kB)
+Requirement already satisfied: packaging>=23.2.0 in .\.venv\Lib\site-packages (from langchain-core<2.0.0,>=1.6.3->langchain) (26.3)
+Requirement already satisfied: pyyaml<7.0.0,>=5.3.0 in .\.venv\Lib\site-packages (from langchain-core<2.0.0,>=1.6.3->langchain) (6.0.3)
+Collecting tenacity!=8.4.0,<10.0.0,>=8.1.0 (from langchain-core<2.0.0,>=1.6.3->langchain)
+  Downloading tenacity-9.1.4-py3-none-any.whl.metadata (1.2 kB)
+Requirement already satisfied: typing-extensions<5.0.0,>=4.7.0 in .\.venv\Lib\site-packages (from langchain-core<2.0.0,>=1.6.3->langchain) (4.16.0)
+Collecting uuid-utils<1.0,>=0.12.0 (from langchain-core<2.0.0,>=1.6.3->langchain)
+  Downloading uuid_utils-0.17.1-cp312-cp312-win_amd64.whl.metadata (6.5 kB)
+Requirement already satisfied: anyio in .\.venv\Lib\site-packages (from httpx<1.0.0,>=0.23.0->langchain-core<2.0.0,>=1.6.3->langchain) (4.15.1)
+Requirement already satisfied: certifi in .\.venv\Lib\site-packages (from httpx<1.0.0,>=0.23.0->langchain-core<2.0.0,>=1.6.3->langchain) (2026.7.22)
+Requirement already satisfied: httpcore==1.* in .\.venv\Lib\site-packages (from httpx<1.0.0,>=0.23.0->langchain-core<2.0.0,>=1.6.3->langchain) (1.0.9)
+Requirement already satisfied: idna in .\.venv\Lib\site-packages (from httpx<1.0.0,>=0.23.0->langchain-core<2.0.0,>=1.6.3->langchain) (3.20)
+Requirement already satisfied: h11>=0.16 in .\.venv\Lib\site-packages (from httpcore==1.*->httpx<1.0.0,>=0.23.0->langchain-core<2.0.0,>=1.6.3->langchain) (0.16.0)
+Collecting jsonpointer>=1.9 (from jsonpatch<2.0.0,>=1.33.0->langchain-core<2.0.0,>=1.6.3->langchain)
+  Downloading jsonpointer-3.1.1-py3-none-any.whl.metadata (2.4 kB)
+Collecting langgraph-checkpoint<5.0.0,>=4.1.0 (from langgraph<1.3.0,>=1.2.11->langchain)
+  Downloading langgraph_checkpoint-4.2.0-py3-none-any.whl.metadata (6.7 kB)
+Collecting langgraph-prebuilt<1.2.0,>=1.1.0 (from langgraph<1.3.0,>=1.2.11->langchain)
+  Downloading langgraph_prebuilt-1.1.0-py3-none-any.whl.metadata (5.2 kB)
+Collecting langgraph-sdk<0.5.0,>=0.4.2 (from langgraph<1.3.0,>=1.2.11->langchain)
+  Downloading langgraph_sdk-0.4.5-py3-none-any.whl.metadata (5.1 kB)
+Collecting xxhash>=3.5.0 (from langgraph<1.3.0,>=1.2.11->langchain)
+  Downloading xxhash-4.0.1-cp312-cp312-win_amd64.whl.metadata (18 kB)
+Collecting ormsgpack>=1.12.0 (from langgraph-checkpoint<5.0.0,>=4.1.0->langgraph<1.3.0,>=1.2.11->langchain)
+  Downloading ormsgpack-1.12.2-cp312-cp312-win_amd64.whl.metadata (3.3 kB)
+Collecting orjson>=3.11.5 (from langgraph-sdk<0.5.0,>=0.4.2->langgraph<1.3.0,>=1.2.11->langchain)
+  Downloading orjson-3.12.0-cp312-cp312-win_amd64.whl.metadata (43 kB)
+Collecting websockets<17,>=14 (from langgraph-sdk<0.5.0,>=0.4.2->langgraph<1.3.0,>=1.2.11->langchain)
+  Downloading websockets-16.1.1-cp312-cp312-win_amd64.whl.metadata (7.0 kB)
+Collecting distro>=1.7.0 (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.6.3->langchain)
+  Downloading distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+Collecting httpx2<3,>=2 (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.6.3->langchain)
+  Downloading httpx2-2.13.1-py3-none-any.whl.metadata (9.8 kB)
+Collecting requests-toolbelt>=1.0.0 (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.6.3->langchain)
+  Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl.metadata (14 kB)
+Requirement already satisfied: requests>=2.0.0 in .\.venv\Lib\site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.6.3->langchain) (2.34.2)
+Collecting sniffio>=1.1 (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.6.3->langchain)
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting zstandard>=0.23.0 (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.6.3->langchain)
+  Downloading zstandard-0.25.0-cp312-cp312-win_amd64.whl.metadata (3.3 kB)
+Collecting httpcore2==2.13.1 (from httpx2<3,>=2->langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.6.3->langchain)
+  Downloading httpcore2-2.13.1-py3-none-any.whl.metadata (26 kB)
+Collecting truststore>=0.10 (from httpx2<3,>=2->langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.6.3->langchain)
+  Using cached truststore-0.10.4-py3-none-any.whl.metadata (4.4 kB)
+Requirement already satisfied: annotated-types>=0.6.0 in .\.venv\Lib\site-packages (from pydantic<3.0.0,>=2.7.4->langchain) (0.8.0)
+Requirement already satisfied: pydantic-core==2.46.5 in .\.venv\Lib\site-packages (from pydantic<3.0.0,>=2.7.4->langchain) (2.46.5)
+Requirement already satisfied: typing-inspection>=0.4.2 in .\.venv\Lib\site-packages (from pydantic<3.0.0,>=2.7.4->langchain) (0.4.4)
+Collecting ollama<1.0.0,>=0.6.1 (from langchain-ollama)
+  Downloading ollama-0.6.2-py3-none-any.whl.metadata (5.8 kB)
+Requirement already satisfied: charset_normalizer<4,>=2 in .\.venv\Lib\site-packages (from requests>=2.0.0->langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.6.3->langchain) (3.5.1)
+Requirement already satisfied: urllib3<3,>=1.26 in .\.venv\Lib\site-packages (from requests>=2.0.0->langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.6.3->langchain) (2.8.0)
+Downloading langchain-1.4.2-py3-none-any.whl (163 kB)
+Downloading langchain_core-1.6.4-py3-none-any.whl (571 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 572.0/572.0 kB 6.6 MB/s  0:00:00
+Downloading jsonpatch-1.33-py2.py3-none-any.whl (12 kB)
+Downloading langgraph-1.2.12-py3-none-any.whl (250 kB)
+Downloading langgraph_checkpoint-4.2.0-py3-none-any.whl (56 kB)
+Downloading langgraph_prebuilt-1.1.0-py3-none-any.whl (41 kB)
+Downloading langgraph_sdk-0.4.5-py3-none-any.whl (162 kB)
+Downloading langsmith-0.14.0-py3-none-any.whl (805 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 805.0/805.0 kB 8.8 MB/s  0:00:00
+Downloading httpx2-2.13.1-py3-none-any.whl (95 kB)
+Downloading httpcore2-2.13.1-py3-none-any.whl (83 kB)
+Downloading tenacity-9.1.4-py3-none-any.whl (28 kB)
+Downloading uuid_utils-0.17.1-cp312-cp312-win_amd64.whl (175 kB)
+Downloading websockets-16.1.1-cp312-cp312-win_amd64.whl (180 kB)
+Downloading langchain_ollama-1.1.0-py3-none-any.whl (31 kB)
+Downloading ollama-0.6.2-py3-none-any.whl (15 kB)
+Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+Downloading jsonpointer-3.1.1-py3-none-any.whl (7.7 kB)
+Downloading langchain_protocol-0.0.19-py3-none-any.whl (7.3 kB)
+Downloading orjson-3.12.0-cp312-cp312-win_amd64.whl (122 kB)
+Downloading ormsgpack-1.12.2-cp312-cp312-win_amd64.whl (117 kB)
+Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached truststore-0.10.4-py3-none-any.whl (18 kB)
+Downloading xxhash-4.0.1-cp312-cp312-win_amd64.whl (37 kB)
+Downloading zstandard-0.25.0-cp312-cp312-win_amd64.whl (506 kB)
+Installing collected packages: zstandard, xxhash, websockets, uuid-utils, truststore, tenacity, sniffio, ormsgpack, orjson, langchain-protocol, jsonpointer, distro, requests-toolbelt, jsonpatch, httpcore2, ollama, httpx2, langsmith, langchain-core, langgraph-sdk, langgraph-checkpoint, langchain-ollama, langgraph-prebuilt, langgraph, langchain
+Successfully installed distro-1.9.0 httpcore2-2.13.1 httpx2-2.13.1 jsonpatch-1.33 jsonpointer-3.1.1 langchain-1.4.2 langchain-core-1.6.4 langchain-ollama-1.1.0 langchain-protocol-0.0.19 langgraph-1.2.12 langgraph-checkpoint-4.2.0 langgraph-prebuilt-1.1.0 langgraph-sdk-0.4.5 langsmith-0.14.0 ollama-0.6.2 orjson-3.12.0 ormsgpack-1.12.2 requests-toolbelt-1.0.0 sniffio-1.3.1 tenacity-9.1.4 truststore-0.10.4 uuid-utils-0.17.1 websockets-16.1.1 xxhash-4.0.1 zstandard-0.25.0
+
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>python -c "import langchain; print('LangChain:', langchain.__version__)"
+LangChain: 1.4.2
+
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>python -c "from langchain_ollama import ChatOllama; print('LangChain + Ollama OK')"
+LangChain + Ollama OK
+
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>python ai_brain.py
+Nice to meet you! I'm HEXBot, your friendly and knowledgeable AI companion. I'm a highly advanced language model designed to provide information, answer questions, and engage in conversations on a wide range of topics.
+
+I'm a large language model, trained on a massive dataset of text from various sources, including books, articles, and online content. This training enables me to understand and generate human-like language, making me a versatile and helpful tool for anyone who interacts with me.
+
+I'm here to assist you with any questions or topics you'd like to discuss, from science and history to entertainment and culture. I'll do my best to provide accurate and up-to-date information, and I'll always strive to be respectful and engaging in our conversations.
+
+So, what's on your mind? Want to chat about something specific or just see where the conversation takes us? I'm all ears (or rather, all text)!
+
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>python -m pip install -U langgraph
+Requirement already satisfied: langgraph in .\.venv\Lib\site-packages (1.2.12)
+Requirement already satisfied: langchain-core<2,>=1.4.7 in .\.venv\Lib\site-packages (from langgraph) (1.6.4)
+Requirement already satisfied: langgraph-checkpoint<5.0.0,>=4.1.0 in .\.venv\Lib\site-packages (from langgraph) (4.2.0)
+Requirement already satisfied: langgraph-prebuilt<1.2.0,>=1.1.0 in .\.venv\Lib\site-packages (from langgraph) (1.1.0)
+Requirement already satisfied: langgraph-sdk<0.5.0,>=0.4.2 in .\.venv\Lib\site-packages (from langgraph) (0.4.5)
+Requirement already satisfied: pydantic>=2.7.4 in .\.venv\Lib\site-packages (from langgraph) (2.13.5)
+Requirement already satisfied: xxhash>=3.5.0 in .\.venv\Lib\site-packages (from langgraph) (4.0.1)
+Requirement already satisfied: httpx<1.0.0,>=0.23.0 in .\.venv\Lib\site-packages (from langchain-core<2,>=1.4.7->langgraph) (0.28.1)
+Requirement already satisfied: jsonpatch<2.0.0,>=1.33.0 in .\.venv\Lib\site-packages (from langchain-core<2,>=1.4.7->langgraph) (1.33)
+Requirement already satisfied: langchain-protocol>=0.0.17 in .\.venv\Lib\site-packages (from langchain-core<2,>=1.4.7->langgraph) (0.0.19)
+Requirement already satisfied: langsmith<1.0.0,>=0.3.45 in .\.venv\Lib\site-packages (from langchain-core<2,>=1.4.7->langgraph) (0.14.0)
+Requirement already satisfied: packaging>=23.2.0 in .\.venv\Lib\site-packages (from langchain-core<2,>=1.4.7->langgraph) (26.3)
+Requirement already satisfied: pyyaml<7.0.0,>=5.3.0 in .\.venv\Lib\site-packages (from langchain-core<2,>=1.4.7->langgraph) (6.0.3)
+Requirement already satisfied: tenacity!=8.4.0,<10.0.0,>=8.1.0 in .\.venv\Lib\site-packages (from langchain-core<2,>=1.4.7->langgraph) (9.1.4)
+Requirement already satisfied: typing-extensions<5.0.0,>=4.7.0 in .\.venv\Lib\site-packages (from langchain-core<2,>=1.4.7->langgraph) (4.16.0)
+Requirement already satisfied: uuid-utils<1.0,>=0.12.0 in .\.venv\Lib\site-packages (from langchain-core<2,>=1.4.7->langgraph) (0.17.1)
+Requirement already satisfied: anyio in .\.venv\Lib\site-packages (from httpx<1.0.0,>=0.23.0->langchain-core<2,>=1.4.7->langgraph) (4.15.1)
+Requirement already satisfied: certifi in .\.venv\Lib\site-packages (from httpx<1.0.0,>=0.23.0->langchain-core<2,>=1.4.7->langgraph) (2026.7.22)
+Requirement already satisfied: httpcore==1.* in .\.venv\Lib\site-packages (from httpx<1.0.0,>=0.23.0->langchain-core<2,>=1.4.7->langgraph) (1.0.9)
+Requirement already satisfied: idna in .\.venv\Lib\site-packages (from httpx<1.0.0,>=0.23.0->langchain-core<2,>=1.4.7->langgraph) (3.20)
+Requirement already satisfied: h11>=0.16 in .\.venv\Lib\site-packages (from httpcore==1.*->httpx<1.0.0,>=0.23.0->langchain-core<2,>=1.4.7->langgraph) (0.16.0)
+Requirement already satisfied: jsonpointer>=1.9 in .\.venv\Lib\site-packages (from jsonpatch<2.0.0,>=1.33.0->langchain-core<2,>=1.4.7->langgraph) (3.1.1)
+Requirement already satisfied: ormsgpack>=1.12.0 in .\.venv\Lib\site-packages (from langgraph-checkpoint<5.0.0,>=4.1.0->langgraph) (1.12.2)
+Requirement already satisfied: orjson>=3.11.5 in .\.venv\Lib\site-packages (from langgraph-sdk<0.5.0,>=0.4.2->langgraph) (3.12.0)
+Requirement already satisfied: websockets<17,>=14 in .\.venv\Lib\site-packages (from langgraph-sdk<0.5.0,>=0.4.2->langgraph) (16.1.1)
+Requirement already satisfied: distro>=1.7.0 in .\.venv\Lib\site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2,>=1.4.7->langgraph) (1.9.0)
+Requirement already satisfied: httpx2<3,>=2 in .\.venv\Lib\site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2,>=1.4.7->langgraph) (2.13.1)
+Requirement already satisfied: requests-toolbelt>=1.0.0 in .\.venv\Lib\site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2,>=1.4.7->langgraph) (1.0.0)
+Requirement already satisfied: requests>=2.0.0 in .\.venv\Lib\site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2,>=1.4.7->langgraph) (2.34.2)
+Requirement already satisfied: sniffio>=1.1 in .\.venv\Lib\site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2,>=1.4.7->langgraph) (1.3.1)
+Requirement already satisfied: zstandard>=0.23.0 in .\.venv\Lib\site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2,>=1.4.7->langgraph) (0.25.0)
+Requirement already satisfied: httpcore2==2.13.1 in .\.venv\Lib\site-packages (from httpx2<3,>=2->langsmith<1.0.0,>=0.3.45->langchain-core<2,>=1.4.7->langgraph) (2.13.1)
+Requirement already satisfied: truststore>=0.10 in .\.venv\Lib\site-packages (from httpx2<3,>=2->langsmith<1.0.0,>=0.3.45->langchain-core<2,>=1.4.7->langgraph) (0.10.4)
+Requirement already satisfied: annotated-types>=0.6.0 in .\.venv\Lib\site-packages (from pydantic>=2.7.4->langgraph) (0.8.0)
+Requirement already satisfied: pydantic-core==2.46.5 in .\.venv\Lib\site-packages (from pydantic>=2.7.4->langgraph) (2.46.5)
+Requirement already satisfied: typing-inspection>=0.4.2 in .\.venv\Lib\site-packages (from pydantic>=2.7.4->langgraph) (0.4.4)
+Requirement already satisfied: charset_normalizer<4,>=2 in .\.venv\Lib\site-packages (from requests>=2.0.0->langsmith<1.0.0,>=0.3.45->langchain-core<2,>=1.4.7->langgraph) (3.5.1)
+Requirement already satisfied: urllib3<3,>=1.26 in .\.venv\Lib\site-packages (from requests>=2.0.0->langsmith<1.0.0,>=0.3.45->langchain-core<2,>=1.4.7->langgraph) (2.8.0)
+
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>python graph.py
+Testing LangGraph + Ollama...
+
+HEXBot:
+I'm HEXBot, an AI designed to provide helpful and informative responses to your questions. I'm constantly learning and improving to better assist you, so please feel free to ask me anything!
+
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>python chatbot_nlp.py
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\shibu\AppData\Roaming\nltk_data...
+[nltk_data]   Unzipping tokenizers\punkt.zip.
+[transformers] No model was supplied, defaulted to distilbert/distilbert-base-uncased-finetuned-sst-2-english and revision 714eb0f.
+Using a pipeline without specifying a model name and revision in production is not recommended.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 629/629 [00:00<?, ?B/s]
+C:\Users\shibu\Desktop\Agentic_AI_Q\.venv\Lib\site-packages\huggingface_hub\file_download.py:150: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\shibu\.cache\huggingface\hub\models--distilbert--distilbert-base-uncased-finetuned-sst-2-english. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+C:\Users\shibu\Desktop\Agentic_AI_Q\.venv\Lib\site-packages\huggingface_hub\file_download.py:150: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\shibu\.cache\huggingface\hub. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+model.safetensors: downloading bytes: █████████████████████████████████████████████████████████████████████████████████████████████████|  250MB, 8.18MB/s
+model.safetensors: reconstructing file: 100%|█████████████████████████████████████████████████████████████████████████████████|  268MB /  268MB, 19.3MB/s
+Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████| 104/104 [00:00<00:00, 2050.16it/s]
+tokenizer_config.json: 100%|████████████████████████████████████████████████████████████████████████████████████████████| 48.0/48.0 [00:00<00:00, 48.2kB/s]
+vocab.txt: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 232k/232k [00:00<00:00, 25.6MB/s]
+Traceback (most recent call last):
+  File "C:\Users\shibu\Desktop\Agentic_AI_Q\.venv\Lib\site-packages\chatterbot\chatterbot.py", line 102, in __init__
+    self.tagger = Tagger(language=tagger_language)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shibu\Desktop\Agentic_AI_Q\.venv\Lib\site-packages\chatterbot\tagging.py", line 129, in __init__
+    self.nlp = spacy.load(model, exclude=['ner'])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shibu\Desktop\Agentic_AI_Q\.venv\Lib\site-packages\spacy\__init__.py", line 74, in load
+    return util.load_model(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\shibu\Desktop\Agentic_AI_Q\.venv\Lib\site-packages\spacy\util.py", line 531, in load_model
+    raise IOError(Errors.E050.format(name=name))
+OSError: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shibu\Desktop\Agentic_AI_Q\chatbot_nlp.py", line 28, in <module>
+    chatbot = ChatBot("HEXBot")
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\shibu\Desktop\Agentic_AI_Q\.venv\Lib\site-packages\chatterbot\chatterbot.py", line 111, in __init__
+    raise self.ChatBotException(
+chatterbot.chatterbot.ChatBot.ChatBotException: Setup error:
+The Spacy model for "English" language is missing.
+Please install the model using the command:
+
+python -m spacy download en_core_web_sm
+
+See https://spacy.io/usage/models for more information about available models.
+
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>python -m spacy download en_core_web_sm
+Collecting en-core-web-sm==3.8.0
+  Downloading en_core_web_sm-3.8.0-py3-none-any.whl (12.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 7.6 MB/s  0:00:01
+Installing collected packages: en-core-web-sm
+Successfully installed en-core-web-sm-3.8.0
+✔ Download and installation successful
+You can now load the package via spacy.load('en_core_web_sm')
+
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>python chatbot_nlp.py
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\shibu\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[transformers] No model was supplied, defaulted to distilbert/distilbert-base-uncased-finetuned-sst-2-english and revision 714eb0f.
+Using a pipeline without specifying a model name and revision in production is not recommended.
+Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████| 104/104 [00:00<00:00, 1408.15it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+List Trainer: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 834/834 [00:00<00:00, 235812.97it/s]
+
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>python -m pip install -U chromadb langchain-chroma
+Collecting chromadb
+  Downloading chromadb-1.5.9-cp39-abi3-win_amd64.whl.metadata (5.1 kB)
+Collecting langchain-chroma
+  Downloading langchain_chroma-1.1.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting build>=1.0.3 (from chromadb)
+  Downloading build-1.6.1-py3-none-any.whl.metadata (5.6 kB)
+Requirement already satisfied: pydantic>=2.0 in .\.venv\Lib\site-packages (from chromadb) (2.13.5)
+Collecting pydantic-settings>=2.0 (from chromadb)
+  Downloading pydantic_settings-2.15.0-py3-none-any.whl.metadata (3.9 kB)
+Collecting pybase64>=1.4.1 (from chromadb)
+  Downloading pybase64-1.5.0-cp312-cp312-win_amd64.whl.metadata (11 kB)
+Collecting uvicorn>=0.18.3 (from uvicorn[standard]>=0.18.3->chromadb)
+  Downloading uvicorn-0.53.0-py3-none-any.whl.metadata (6.6 kB)
+Requirement already satisfied: numpy>=1.22.5 in .\.venv\Lib\site-packages (from chromadb) (2.5.3)
+Requirement already satisfied: typing-extensions>=4.5.0 in .\.venv\Lib\site-packages (from chromadb) (4.16.0)
+Collecting onnxruntime>=1.14.1 (from chromadb)
+  Downloading onnxruntime-1.30.0-cp312-cp312-win_amd64.whl.metadata (5.9 kB)
+Collecting opentelemetry-api>=1.2.0 (from chromadb)
+  Downloading opentelemetry_api-1.44.0-py3-none-any.whl.metadata (1.4 kB)
+Collecting opentelemetry-exporter-otlp-proto-grpc>=1.2.0 (from chromadb)
+  Downloading opentelemetry_exporter_otlp_proto_grpc-1.44.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting opentelemetry-sdk>=1.2.0 (from chromadb)
+  Downloading opentelemetry_sdk-1.44.0-py3-none-any.whl.metadata (1.6 kB)
+Requirement already satisfied: tokenizers>=0.13.2 in .\.venv\Lib\site-packages (from chromadb) (0.23.2)
+Collecting pypika>=0.48.9 (from chromadb)
+  Downloading pypika-0.51.1-py2.py3-none-any.whl.metadata (51 kB)
+Requirement already satisfied: tqdm>=4.65.0 in .\.venv\Lib\site-packages (from chromadb) (4.70.1)
+Collecting overrides>=7.3.1 (from chromadb)
+  Downloading overrides-7.7.0-py3-none-any.whl.metadata (5.8 kB)
+Collecting importlib-resources (from chromadb)
+  Downloading importlib_resources-7.1.0-py3-none-any.whl.metadata (4.0 kB)
+Collecting grpcio>=1.58.0 (from chromadb)
+  Downloading grpcio-1.84.0-cp312-cp312-win_amd64.whl.metadata (3.9 kB)
+Collecting bcrypt>=4.0.1 (from chromadb)
+  Downloading bcrypt-5.0.0-cp39-abi3-win_amd64.whl.metadata (10 kB)
+Requirement already satisfied: typer>=0.9.0 in .\.venv\Lib\site-packages (from chromadb) (0.27.2)
+Collecting kubernetes>=28.1.0 (from chromadb)
+  Downloading kubernetes-36.0.3-py2.py3-none-any.whl.metadata (1.8 kB)
+Requirement already satisfied: tenacity>=8.2.3 in .\.venv\Lib\site-packages (from chromadb) (9.1.4)
+Requirement already satisfied: pyyaml>=6.0.0 in .\.venv\Lib\site-packages (from chromadb) (6.0.3)
+Collecting mmh3>=4.0.1 (from chromadb)
+  Downloading mmh3-5.3.0-cp312-cp312-win_amd64.whl.metadata (14 kB)
+Requirement already satisfied: orjson>=3.9.12 in .\.venv\Lib\site-packages (from chromadb) (3.12.0)
+Requirement already satisfied: httpx>=0.27.0 in .\.venv\Lib\site-packages (from chromadb) (0.28.1)
+Requirement already satisfied: rich>=10.11.0 in .\.venv\Lib\site-packages (from chromadb) (15.0.0)
+Collecting jsonschema>=4.19.0 (from chromadb)
+  Using cached jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Requirement already satisfied: langchain-core<2.0.0,>=1.1.3 in .\.venv\Lib\site-packages (from langchain-chroma) (1.6.4)
+Requirement already satisfied: jsonpatch<2.0.0,>=1.33.0 in .\.venv\Lib\site-packages (from langchain-core<2.0.0,>=1.1.3->langchain-chroma) (1.33)
+Requirement already satisfied: langchain-protocol>=0.0.17 in .\.venv\Lib\site-packages (from langchain-core<2.0.0,>=1.1.3->langchain-chroma) (0.0.19)
+Requirement already satisfied: langsmith<1.0.0,>=0.3.45 in .\.venv\Lib\site-packages (from langchain-core<2.0.0,>=1.1.3->langchain-chroma) (0.14.0)
+Requirement already satisfied: packaging>=23.2.0 in .\.venv\Lib\site-packages (from langchain-core<2.0.0,>=1.1.3->langchain-chroma) (26.3)
+Requirement already satisfied: uuid-utils<1.0,>=0.12.0 in .\.venv\Lib\site-packages (from langchain-core<2.0.0,>=1.1.3->langchain-chroma) (0.17.1)
+Requirement already satisfied: anyio in .\.venv\Lib\site-packages (from httpx>=0.27.0->chromadb) (4.15.1)
+Requirement already satisfied: certifi in .\.venv\Lib\site-packages (from httpx>=0.27.0->chromadb) (2026.7.22)
+Requirement already satisfied: httpcore==1.* in .\.venv\Lib\site-packages (from httpx>=0.27.0->chromadb) (1.0.9)
+Requirement already satisfied: idna in .\.venv\Lib\site-packages (from httpx>=0.27.0->chromadb) (3.20)
+Requirement already satisfied: h11>=0.16 in .\.venv\Lib\site-packages (from httpcore==1.*->httpx>=0.27.0->chromadb) (0.16.0)
+Requirement already satisfied: jsonpointer>=1.9 in .\.venv\Lib\site-packages (from jsonpatch<2.0.0,>=1.33.0->langchain-core<2.0.0,>=1.1.3->langchain-chroma) (3.1.1)
+Requirement already satisfied: distro>=1.7.0 in .\.venv\Lib\site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.1.3->langchain-chroma) (1.9.0)
+Requirement already satisfied: httpx2<3,>=2 in .\.venv\Lib\site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.1.3->langchain-chroma) (2.13.1)
+Requirement already satisfied: requests-toolbelt>=1.0.0 in .\.venv\Lib\site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.1.3->langchain-chroma) (1.0.0)
+Requirement already satisfied: requests>=2.0.0 in .\.venv\Lib\site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.1.3->langchain-chroma) (2.34.2)
+Requirement already satisfied: sniffio>=1.1 in .\.venv\Lib\site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.1.3->langchain-chroma) (1.3.1)
+Requirement already satisfied: websockets>=15.0 in .\.venv\Lib\site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.1.3->langchain-chroma) (16.1.1)
+Requirement already satisfied: xxhash>=3.0.0 in .\.venv\Lib\site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.1.3->langchain-chroma) (4.0.1)
+Requirement already satisfied: zstandard>=0.23.0 in .\.venv\Lib\site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.1.3->langchain-chroma) (0.25.0)
+Requirement already satisfied: httpcore2==2.13.1 in .\.venv\Lib\site-packages (from httpx2<3,>=2->langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.1.3->langchain-chroma) (2.13.1)
+Requirement already satisfied: truststore>=0.10 in .\.venv\Lib\site-packages (from httpx2<3,>=2->langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.1.3->langchain-chroma) (0.10.4)
+Requirement already satisfied: annotated-types>=0.6.0 in .\.venv\Lib\site-packages (from pydantic>=2.0->chromadb) (0.8.0)
+Requirement already satisfied: pydantic-core==2.46.5 in .\.venv\Lib\site-packages (from pydantic>=2.0->chromadb) (2.46.5)
+Requirement already satisfied: typing-inspection>=0.4.2 in .\.venv\Lib\site-packages (from pydantic>=2.0->chromadb) (0.4.4)
+Collecting pyproject_hooks (from build>=1.0.3->chromadb)
+  Downloading pyproject_hooks-1.3.3-py3-none-any.whl.metadata (1.3 kB)
+Requirement already satisfied: colorama in .\.venv\Lib\site-packages (from build>=1.0.3->chromadb) (0.4.6)
+Collecting attrs>=22.2.0 (from jsonschema>=4.19.0->chromadb)
+  Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.19.0->chromadb)
+  Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=4.19.0->chromadb)
+  Using cached referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.25.0 (from jsonschema>=4.19.0->chromadb)
+  Downloading rpds_py-2026.6.3-cp312-cp312-win_amd64.whl.metadata (4.2 kB)
+Requirement already satisfied: six>=1.9.0 in .\.venv\Lib\site-packages (from kubernetes>=28.1.0->chromadb) (1.17.0)
+Requirement already satisfied: python-dateutil>=2.5.3 in .\.venv\Lib\site-packages (from kubernetes>=28.1.0->chromadb) (2.9.0.post0)
+Collecting websocket-client!=0.40.0,!=0.41.*,!=0.42.*,>=0.32.0 (from kubernetes>=28.1.0->chromadb)
+  Downloading websocket_client-1.9.2-py3-none-any.whl.metadata (8.3 kB)
+Collecting requests-oauthlib (from kubernetes>=28.1.0->chromadb)
+  Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl.metadata (11 kB)
+Requirement already satisfied: urllib3!=2.6.0,>=1.24.2 in .\.venv\Lib\site-packages (from kubernetes>=28.1.0->chromadb) (2.8.0)
+Collecting durationpy>=0.7 (from kubernetes>=28.1.0->chromadb)
+  Downloading durationpy-0.11-py3-none-any.whl.metadata (474 bytes)
+Collecting aiohttp<4.0.0,>=3.13.5 (from kubernetes>=28.1.0->chromadb)
+  Downloading aiohttp-3.14.3-cp312-cp312-win_amd64.whl.metadata (8.5 kB)
+Collecting aiohappyeyeballs>=2.5.0 (from aiohttp<4.0.0,>=3.13.5->kubernetes>=28.1.0->chromadb)
+  Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)
+Collecting aiosignal>=1.4.0 (from aiohttp<4.0.0,>=3.13.5->kubernetes>=28.1.0->chromadb)
+  Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp<4.0.0,>=3.13.5->kubernetes>=28.1.0->chromadb)
+  Downloading frozenlist-1.8.0-cp312-cp312-win_amd64.whl.metadata (21 kB)
+Collecting multidict<7.0,>=4.5 (from aiohttp<4.0.0,>=3.13.5->kubernetes>=28.1.0->chromadb)
+  Downloading multidict-6.9.1-cp312-cp312-win_amd64.whl.metadata (5.4 kB)
+Collecting propcache>=0.2.0 (from aiohttp<4.0.0,>=3.13.5->kubernetes>=28.1.0->chromadb)
+  Downloading propcache-0.5.4-cp312-cp312-win_amd64.whl.metadata (25 kB)
+Collecting yarl<2.0,>=1.17.0 (from aiohttp<4.0.0,>=3.13.5->kubernetes>=28.1.0->chromadb)
+  Downloading yarl-1.25.1-cp312-cp312-win_amd64.whl.metadata (115 kB)
+Collecting flatbuffers (from onnxruntime>=1.14.1->chromadb)
+  Downloading flatbuffers-25.12.19-py2.py3-none-any.whl.metadata (1.0 kB)
+Collecting protobuf>=4.25.8 (from onnxruntime>=1.14.1->chromadb)
+  Downloading protobuf-7.36.2-cp310-abi3-win_amd64.whl.metadata (595 bytes)
+Collecting googleapis-common-protos~=1.57 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb)
+  Downloading googleapis_common_protos-1.75.3-py3-none-any.whl.metadata (8.5 kB)
+Collecting opentelemetry-exporter-otlp-proto-common==1.44.0 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb)
+  Downloading opentelemetry_exporter_otlp_proto_common-1.44.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting opentelemetry-proto==1.44.0 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb)
+  Downloading opentelemetry_proto-1.44.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting opentelemetry-semantic-conventions==0.65b0 (from opentelemetry-sdk>=1.2.0->chromadb)
+  Downloading opentelemetry_semantic_conventions-0.65b0-py3-none-any.whl.metadata (2.4 kB)
+Collecting python-dotenv>=0.21.0 (from pydantic-settings>=2.0->chromadb)
+  Using cached python_dotenv-1.2.3-py3-none-any.whl.metadata (29 kB)
+Requirement already satisfied: charset_normalizer<4,>=2 in .\.venv\Lib\site-packages (from requests>=2.0.0->langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.1.3->langchain-chroma) (3.5.1)
+Requirement already satisfied: markdown-it-py>=2.2.0 in .\.venv\Lib\site-packages (from rich>=10.11.0->chromadb) (4.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in .\.venv\Lib\site-packages (from rich>=10.11.0->chromadb) (2.21.0)
+Requirement already satisfied: mdurl~=0.1 in .\.venv\Lib\site-packages (from markdown-it-py>=2.2.0->rich>=10.11.0->chromadb) (0.1.2)
+Requirement already satisfied: huggingface-hub<2.0,>=0.16.4 in .\.venv\Lib\site-packages (from tokenizers>=0.13.2->chromadb) (1.32.0)
+Requirement already satisfied: click<9.0.0,>=8.4.2 in .\.venv\Lib\site-packages (from huggingface-hub<2.0,>=0.16.4->tokenizers>=0.13.2->chromadb) (8.5.0)
+Requirement already satisfied: filelock>=3.10.0 in .\.venv\Lib\site-packages (from huggingface-hub<2.0,>=0.16.4->tokenizers>=0.13.2->chromadb) (4.0.1)
+Requirement already satisfied: fsspec>=2023.5.0 in .\.venv\Lib\site-packages (from huggingface-hub<2.0,>=0.16.4->tokenizers>=0.13.2->chromadb) (2026.9.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.5.2 in .\.venv\Lib\site-packages (from huggingface-hub<2.0,>=0.16.4->tokenizers>=0.13.2->chromadb) (1.6.0)
+Requirement already satisfied: shellingham>=1.3.0 in .\.venv\Lib\site-packages (from typer>=0.9.0->chromadb) (1.5.4)
+Requirement already satisfied: annotated-doc>=0.0.2 in .\.venv\Lib\site-packages (from typer>=0.9.0->chromadb) (0.0.5)
+Collecting httptools>=0.8.0 (from uvicorn[standard]>=0.18.3->chromadb)
+  Downloading httptools-0.8.0-cp312-cp312-win_amd64.whl.metadata (3.7 kB)
+Collecting watchfiles>=0.20 (from uvicorn[standard]>=0.18.3->chromadb)
+  Downloading watchfiles-1.3.0-cp310-abi3-win_amd64.whl.metadata (5.0 kB)
+Collecting oauthlib>=3.0.0 (from requests-oauthlib->kubernetes>=28.1.0->chromadb)
+  Downloading oauthlib-3.3.1-py3-none-any.whl.metadata (7.9 kB)
+Downloading chromadb-1.5.9-cp39-abi3-win_amd64.whl (23.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 23.5/23.5 MB 8.2 MB/s  0:00:02
+Downloading langchain_chroma-1.1.0-py3-none-any.whl (12 kB)
+Downloading bcrypt-5.0.0-cp39-abi3-win_amd64.whl (150 kB)
+Downloading build-1.6.1-py3-none-any.whl (31 kB)
+Downloading grpcio-1.84.0-cp312-cp312-win_amd64.whl (5.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 9.1 MB/s  0:00:00
+Using cached jsonschema-4.26.0-py3-none-any.whl (90 kB)
+Using cached attrs-26.1.0-py3-none-any.whl (67 kB)
+Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Downloading kubernetes-36.0.3-py2.py3-none-any.whl (4.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 8.5 MB/s  0:00:01
+Downloading aiohttp-3.14.3-cp312-cp312-win_amd64.whl (476 kB)
+Downloading multidict-6.9.1-cp312-cp312-win_amd64.whl (59 kB)
+Downloading yarl-1.25.1-cp312-cp312-win_amd64.whl (102 kB)
+Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Downloading durationpy-0.11-py3-none-any.whl (4.1 kB)
+Downloading frozenlist-1.8.0-cp312-cp312-win_amd64.whl (44 kB)
+Downloading mmh3-5.3.0-cp312-cp312-win_amd64.whl (41 kB)
+Downloading onnxruntime-1.30.0-cp312-cp312-win_amd64.whl (14.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.3/14.3 MB 8.6 MB/s  0:00:01
+Downloading opentelemetry_api-1.44.0-py3-none-any.whl (60 kB)
+Downloading opentelemetry_exporter_otlp_proto_grpc-1.44.0-py3-none-any.whl (19 kB)
+Downloading opentelemetry_exporter_otlp_proto_common-1.44.0-py3-none-any.whl (17 kB)
+Downloading opentelemetry_proto-1.44.0-py3-none-any.whl (72 kB)
+Downloading googleapis_common_protos-1.75.3-py3-none-any.whl (306 kB)
+Downloading opentelemetry_sdk-1.44.0-py3-none-any.whl (137 kB)
+Downloading opentelemetry_semantic_conventions-0.65b0-py3-none-any.whl (204 kB)
+Downloading protobuf-7.36.2-cp310-abi3-win_amd64.whl (456 kB)
+Downloading overrides-7.7.0-py3-none-any.whl (17 kB)
+Downloading propcache-0.5.4-cp312-cp312-win_amd64.whl (46 kB)
+Downloading pybase64-1.5.0-cp312-cp312-win_amd64.whl (44 kB)
+Downloading pydantic_settings-2.15.0-py3-none-any.whl (69 kB)
+Downloading pypika-0.51.1-py2.py3-none-any.whl (60 kB)
+Using cached python_dotenv-1.2.3-py3-none-any.whl (22 kB)
+Using cached referencing-0.37.0-py3-none-any.whl (26 kB)
+Downloading rpds_py-2026.6.3-cp312-cp312-win_amd64.whl (220 kB)
+Downloading uvicorn-0.53.0-py3-none-any.whl (87 kB)
+Downloading httptools-0.8.0-cp312-cp312-win_amd64.whl (90 kB)
+Downloading watchfiles-1.3.0-cp310-abi3-win_amd64.whl (290 kB)
+Downloading websocket_client-1.9.2-py3-none-any.whl (95 kB)
+Downloading flatbuffers-25.12.19-py2.py3-none-any.whl (26 kB)
+Downloading importlib_resources-7.1.0-py3-none-any.whl (37 kB)
+Downloading pyproject_hooks-1.3.3-py3-none-any.whl (10 kB)
+Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl (24 kB)
+Downloading oauthlib-3.3.1-py3-none-any.whl (160 kB)
+Installing collected packages: pypika, flatbuffers, durationpy, websocket-client, uvicorn, rpds-py, python-dotenv, pyproject_hooks, pybase64, protobuf, propcache, overrides, opentelemetry-api, oauthlib, multidict, mmh3, importlib-resources, httptools, grpcio, frozenlist, bcrypt, attrs, aiohappyeyeballs, yarl, watchfiles, requests-oauthlib, referencing, opentelemetry-semantic-conventions, opentelemetry-proto, onnxruntime, googleapis-common-protos, build, aiosignal, pydantic-settings, opentelemetry-sdk, opentelemetry-exporter-otlp-proto-common, jsonschema-specifications, aiohttp, opentelemetry-exporter-otlp-proto-grpc, kubernetes, jsonschema, chromadb, langchain-chroma
+Successfully installed aiohappyeyeballs-2.7.1 aiohttp-3.14.3 aiosignal-1.4.0 attrs-26.1.0 bcrypt-5.0.0 build-1.6.1 chromadb-1.5.9 durationpy-0.11 flatbuffers-25.12.19 frozenlist-1.8.0 googleapis-common-protos-1.75.3 grpcio-1.84.0 httptools-0.8.0 importlib-resources-7.1.0 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 kubernetes-36.0.3 langchain-chroma-1.1.0 mmh3-5.3.0 multidict-6.9.1 oauthlib-3.3.1 onnxruntime-1.30.0 opentelemetry-api-1.44.0 opentelemetry-exporter-otlp-proto-common-1.44.0 opentelemetry-exporter-otlp-proto-grpc-1.44.0 opentelemetry-proto-1.44.0 opentelemetry-sdk-1.44.0 opentelemetry-semantic-conventions-0.65b0 overrides-7.7.0 propcache-0.5.4 protobuf-7.36.2 pybase64-1.5.0 pydantic-settings-2.15.0 pypika-0.51.1 pyproject_hooks-1.3.3 python-dotenv-1.2.3 referencing-0.37.0 requests-oauthlib-2.0.0 rpds-py-2026.6.3 uvicorn-0.53.0 watchfiles-1.3.0 websocket-client-1.9.2 yarl-1.25.1
+
+---------------------
+Install the Python package:
+
+```bash
+pip install ollama
+```
+
+If that prints a response, you're ready.
+
+---
+
+# Step 5 — Install LangChain
+
+Now install:
+
+```bash
+pip install langchain
+pip install langchain-ollama
+---------------------------------------------------------
+Install:
+
+```bash
+pip install chromadb
+pip install langchain-chroma
+pip install langchain-huggingface
+pip install sentence-transformers
+```
+-------------------------------------------------------------------
+
+
+Run:
+
+```cmd
+pip install customtkinter chatterbot chatterbot-corpus textblob pillow
+```
+
+Then:
+
+```cmd
+python -m textblob.download_corpora
+---------------------------------------------------------------------
+
+
+Run:
+
+```cmd
+pip install customtkinter chatterbot chatterbot-corpus textblob pillow
+```
+
+Then:
+
+```cmd
+python -m textblob.download_corpora
+
+
+------------------------------------------------------------------
+
+Run:
+
+```cmd
+pip install customtkinter chatterbot chatterbot-corpus textblob pillow
+```
+
+Then:
+
+```cmd
+python -m textblob.download_corpora
+```
+
+Hugging Face currently documents Transformers as working with Python 3.10+ and PyTorch 2.5+. ([Hugging Face][3])
+
+Test:
+
+```cmd
+python -c "import torch; import transformers; print('Torch:', torch.__version__); print('Transformers:', transformers.__version__)"
+```
+
+---
+
+# Step 9 — Test your existing imports
+
+Run:
+
+```cmd
+python -c "from transformers import CLIPProcessor, CLIPModel, BlipProcessor, BlipForConditionalGeneration; print('CLIP + BLIP OK')"
+```
+
+Then:
+
+```cmd
+python -c "import torch; import transformers; import customtkinter; import PIL; print('All imports OK')"
+```
+
+If you get:
+
+```text
+CLIP + BLIP OK
+```
+
+and:
+
+```text
+All imports OK
+```
+
+then your existing AI/image dependencies are working.
+
+---
+
+# One correction to your original installation
+
+You had:
+
+```cmd
+pip install customtkinter chatterbot chatterbot-corpus textblob torch pillow transformers
+```
+---------------------------------------------------------------------------------------------
+Step 12 — Install LangChain
+
+**Only after Ollama works**, install LangChain.
+
+Inside your activated `.venv`:
+
+```cmd
+pip install -U langchain langchain-ollama
+
+-----------------------------------------------------------------------
+
+ Step 13 — Install LangGraph
+
+You are currently using:
+
+```text
+(.venv) C:\Users\shibu\Desktop\Agentic_AI_Q>
+```
+
+Run:
+
+```cmd
+pip install -U langgraph
+```
+
+Then verify:
+
+```cmd
+python -c "import langgraph; print('LangGraph OK')"
+```
+
+You should get:
+
+```text
+LangGraph OK
+------------------------------------------------------
+So your complete RAG system can run on your laptop.
+
+First install the packages:
+
+```cmd
+pip install -U chromadb langchain-chroma langchain-ollama
+```
+
+Then we'll download a small embedding model through Ollama.
+
+For example:
+
+```cmd
+ollama pull nomic-embed-text
+```
+
+Your models will then look something like:
+
+```cmd
+ollama list
+```
+
+```text
+NAME
+-------------------
+llama3.2:3b
+nomic-embed-text
+```
+
+The important distinction is:
+
+```text
+llama3.2:3b
+      ↓
+generates answers
+
+nomic-embed-text
+      ↓
+converts documents/questions into vectors
+-----------------------------------------------
+``cmd
+pip install -U langgraph
+```
+
+then:
+
+```cmd
+python -c "import langgraph; print('LangGraph OK')"
+```
+
+Then create `graph.py` using the code above and run:
+
+```cmd
+python graph.py
+```
+
+**Don't install Chroma or LangSmith yet.** We should first make sure your `LangGraph → LangChain → Ollama → Llama 3.2` chain works cleanly.
+-----------------------------------------------
+Perfect. ✅ **LangGraph is already installed correctly.**
+
+Your output confirms:
+---------------------------------------------
+## If you get an import error
+
+If you see:
+
+```text
+ModuleNotFoundError: No module named 'langchain_ollama'
+```
+
+run:
+
+```cmd
+pip install -U langchain-ollama
+```
+
+Then run:
+
+```cmd
+python graph.py
+```
+
+-------------------------
+```
+
+The only part that may involve a cloud service later is **LangSmith**, if you choose to use the hosted LangSmith service for tracing. We can keep that separate from your local chatbot.
+
+**For now, run `python graph.py`. Send me the output/error, and we'll proceed directly to the RAG installation.**
+--------------------------------------------------------------------------------------
+The Spacy model for "English" language is missing.
+Please install the model using the command:
+
+python -m spacy download en_core_web_sm
+
+See https://spacy.io/usage/models for more information about available models.
+------------------------------------------------------------------------------
+Perfect. ✅ **Step 14 is successful.**
+run:
+
+```cmd
+pip install -U langchain-ollama
+------------------------------------------
+
+```cmd
+pip install -U chromadb langchain-chroma
+```
+
+You already have `langchain-ollama`, so don't need to reinstall it.
+
+Then verify:
+
+```cmd
+python -c "import chromadb; print('Chroma OK')"
+```
+
+and:
+
+```cmd
+python -c "from langchain_chroma import Chroma; print('LangChain + Chroma OK')"
+```
+
+You should see:
+
+```text
+Chroma OK
+LangChain + Chroma OK
+```
+
+---
+
+# Step 16.2 — Install the local embedding model
+
+Now tell Ollama to download the embedding model:
+
+```cmd
+ollama pull nomic-embed-text
+```
+
+This is separate from your LLM.
+
+You currently have:
+
+```cmd
+ollama list
+--------------------------------------------------------------------
+# Step 16.5 — Verify Ollama embeddings
+
+Before writing `ingest.py`, run:
+
+```cmd
+ollama list
+```
+
+You should have:
+
+```text
+llama3.2:3b
+nomic-embed-text
+```
+
+Then test the embedding model:
+
+```cmd
+ollama run nomic-embed-text
+```
+
+If Ollama doesn't provide the normal interactive behavior for this model, that's okay; the important test will be through LangChain.
+
+Exit if necessary with:
+
+```text
+/bye
+```
+
+-----------------------------------------------------------------
+```python
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+```
+
+So install these:
+
+```cmd
+pip install -U langchain-community langchain-text-splitters
+```
+
+Then run:
+
+```cmd
+python rag\ingest.py
+```
+
+Expected output will be approximately:
+
+```text
+Loaded 1 document(s).
+Created 1 chunk(s).
+RAG database created successfully.
+Location: C:\Users\shibu\Desktop\Agentic_AI_Q\rag\chroma_db
+```
+
+--------------------------------------------------------------------------
+Run these in order:
+
+### 1.
+
+```cmd
+pip install -U chromadb langchain-chroma langchain-community langchain-text-splitters
+```
+
+### 2.
+
+```cmd
+ollama pull nomic-embed-text
+```
+
+### 3.
+
+```cmd
+ollama list
+```
+
+### 4.
+
+```cmd
+python -c "import chromadb; print('Chroma OK')"
+```
+
+### 5.
+
+```cmd
+python -c "from langchain_chroma import Chroma; from langchain_ollama import OllamaEmbeddings; print('RAG imports OK')"
+```
+
+### 6.
+
+```cmd
+python rag\ingest.py
+-------------------------------------------------------------------------------------
+```cmd
+python -m pip install -U langchain langchain-ollama langchain-community chromadb
+```
+
+Then we'll use your already-installed local:
+
+```text
+nomic-embed-text
+```
+
+for embeddings and:
+
+```text
+llama3.2:3b
+```
+
+for generation.
+
+**No paid API key is required for this RAG setup.**
+
+### 3. Test your embedding model correctly
+
+Instead of:
+
+```cmd
+ollama run nomic-embed-text
+```
+
+use:
+
+```cmd
+ollama run nomic-embed-text "Hello, this is a test."
+```
+
+You may see an embedding vector/output rather than a normal conversational answer. That's correct.
+
+### 4. Don't create the vector database manually
+
+You **do not** need to create a `chromadb` folder yourself.
+
+`ingest.py` will create/populate the vector database when we run it.
+
+--------------------------------------------------------------------------
+Run:
+
+```cmd
+python -m pip show langchain
+python -m pip show langchain-ollama
+python -m pip show chromadb
+-------------------------------------------
+## 1. Install the document/RAG dependencies
+
+Inside your activated `.venv`, run:
+
+```cmd
+python -m pip install -U langchain langchain-ollama langchain-community chromadb
+```
+
+Wait until it says `Successfully installed` or `Requirement already satisfied`.
+
+### 2. Open `rag\ingest.py`
+
+Put this code inside:
+
+```python
+from pathlib import Path
+
+from langchain_community.document_loaders import TextLoader
+from langchain_ollama import OllamaEmbeddings
+from langchain_community.vectorstores import Chroma
+
+
+
+-------------------------------------------------------------------------
+
+Run:
+
+```cmd
+python -m pip install -U langchain-chroma
+```
+
+Then open:
+
+```text
+rag\retriever.py
+```
+
+Change:
+
+```python
+from langchain_community.vectorstores import Chroma
+--------------------
+https://ollama.com/download/windows
+
+
+
+
+
+
+
+
+
+--------------------------------------------

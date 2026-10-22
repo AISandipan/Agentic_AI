@@ -1,0 +1,327 @@
+
+
+### 1. Business Report
+
+Create a new blank document.
+
+Look for **Copilot** in the Word interface.
+
+Try:
+
+> Create a professional three-page business report about improving customer satisfaction. Include an executive summary, current challenges, proposed solutions, implementation plan, KPIs and conclusion.
+
+You can then ask Copilot to:
+
+* Make it more professional
+* Add a table
+* Summarize the report
+* Create an executive summary
+* Make the recommendations more detailed
+
+---
+
+### 2. Project Plan
+
+Create a new blank document.
+
+Open **Copilot** in Word.
+
+Try:
+
+> Create a detailed project plan for developing a Power BI sales dashboard. Include project objectives, requirements, team responsibilities, milestones, timeline, risks, deliverables and success criteria.
+
+You can also ask Copilot to:
+
+* Convert the plan into a table
+* Add a 30-day timeline
+* Identify missing tasks
+* Make it more concise
+* Create a project checklist
+
+---
+
+### 3. Meeting Minutes
+
+Create a new blank document.
+
+Look for **Copilot**.
+
+Try:
+
+> Create professional meeting minutes for a project kickoff meeting. Include meeting objectives, attendees, key discussion points, decisions made, action items, responsible persons and deadlines.
+
+You can then ask Copilot to:
+
+* Make the minutes shorter
+* Highlight action items
+* Create an action-item table
+* Rewrite them professionally
+* Create a follow-up email
+
+---
+
+### 4. Business Email
+
+Create a new blank document.
+
+Open **Copilot**.
+
+Try:
+
+> Write a professional email to a client explaining that a project milestone has been completed. Thank them for their cooperation, summarize the completed work, mention the next milestone and request any required feedback.
+
+You can then ask Copilot to:
+
+* Make it more friendly
+* Make it shorter
+* Make it more formal
+* Change the tone to confident
+* Create a subject line
+
+---
+
+### 5. Training Document
+
+Create a new blank document.
+
+Look for **Copilot**.
+
+Try:
+
+> Create a professional employee training guide for Microsoft Power BI beginners. Include an introduction, Power BI concepts, importing data, data cleaning, creating relationships, DAX basics, dashboards, best practices and a final checklist.
+
+You can then ask Copilot to:
+
+* Create an outline
+* Add examples
+* Simplify the language
+* Create a training schedule
+* Add a quiz at the end
+
+---
+
+### 6. Marketing Plan
+
+Create a new blank document.
+
+Open **Copilot**.
+
+Try:
+
+> Create a professional digital marketing plan for a new technology consulting company. Include target audience, marketing objectives, branding strategy, social media strategy, content plan, SEO, email marketing, budget considerations and KPIs.
+
+You can then ask Copilot to:
+
+* Create a 30-day content calendar
+* Make the plan more concise
+* Add measurable KPIs
+* Create a social media strategy
+* Turn the plan into an executive summary
+
+---
+
+### 7. Business Proposal
+
+Create a new blank document.
+
+Look for **Copilot**.
+
+Try:
+
+> Create a professional business proposal for implementing an automated reporting system using Microsoft Power BI and Power Automate. Include the business problem, proposed solution, objectives, scope, benefits, implementation phases, timeline, risks and next steps.
+
+You can then ask Copilot to:
+
+* Add a pricing section
+* Create a project timeline
+* Add an ROI section
+* Make it suitable for senior management
+* Create a one-page executive summary
+
+---
+
+### 8. Job Description
+
+Create a new blank document.
+
+Open **Copilot**.
+
+Try:
+
+> Create a professional job description for a Data Analyst. Include job summary, responsibilities, required technical skills, preferred qualifications, tools and technologies, soft skills and performance expectations.
+
+You can then ask Copilot to:
+
+* Make it shorter
+* Make it more attractive to candidates
+* Add Power BI and SQL requirements
+* Create interview questions
+* Create a LinkedIn job-post version
+
+---
+
+### 9. Project Risk Assessment
+
+Create a new blank document.
+
+Look for **Copilot**.
+
+Try:
+
+> Create a project risk assessment for a Microsoft 365 implementation project. Include technical, security, user adoption, data migration, budget and timeline risks. For each risk, include probability, potential impact, mitigation strategy and owner.
+
+You can then ask Copilot to:
+
+* Convert the risks into a table
+* Add a risk matrix
+* Create mitigation actions
+* Summarize the highest-priority risks
+* Create a risk monitoring checklist
+
+---
+
+### 10. Executive Presentation Content
+
+Create a new blank document.
+
+Open **Copilot**.
+
+Try:
+
+> Create professional content for a 10-slide executive presentation about a company's digital transformation strategy. Include the current situation, business challenges, objectives, technology strategy, automation opportunities, data and analytics, implementation roadmap, expected benefits and next steps.
+
+You can then ask Copilot to:
+
+* Convert the content into an executive summary
+* Make each slide more concise
+* Add speaker notes
+* Create a presentation outline
+* Rewrite it for a senior management audience
+
+#----------------------------------------------------------------------
+
+Look for Copilot in Word.
+
+Try:
+
+Create a one-page executive summary for a digital transformation project. Include the business challenge, objectives, proposed solution, expected benefits, investment considerations, risks and recommended next steps.
+
+You can then ask Copilot to:
+
+Make it shorter
+Make it suitable for senior executives
+Highlight key numbers
+Add a recommendation section
+12. Company Policy
+
+Create a new blank document.
+
+Open Copilot.
+
+Try:
+
+Create a professional company policy for remote and hybrid working. Include purpose, eligibility, working hours, communication expectations, cybersecurity requirements, equipment responsibilities, employee responsibilities and review process.
+
+You can then ask Copilot to:
+
+Make the language easier to understand
+Add an FAQ section
+Create a one-page summary
+Make it more formal
+13. Standard Operating Procedure
+
+Create a new blank document.
+
+Look for Copilot.
+
+Try:
+
+Create a detailed Standard Operating Procedure for processing customer requests. Include purpose, scope, responsibilities, step-by-step procedures, required information, quality checks, escalation process and documentation requirements.
+
+You can then ask Copilot to:
+
+Turn the steps into a checklist
+Add a process flow
+Simplify the instructions
+Create a training version
+14. Data Analytics Report
+
+Create a new blank document.
+
+Open Copilot.
+
+Try:
+
+Create a professional data analytics report for a retail company. Include business objectives, sales performance, customer trends, product performance, regional analysis, key insights, recommendations and KPIs.
+
+You can then ask Copilot to:
+
+Create KPI tables
+Add an executive summary
+Make the insights more concise
+Create recommendations based on the findings
+15. Client Onboarding Guide
+
+Create a new blank document.
+
+Look for Copilot.
+
+Try:
+
+Create a professional client onboarding guide for a technology consulting company. Include welcome information, onboarding steps, required documents, communication channels, project kickoff process, responsibilities, timeline and support process.
+
+You can then ask Copilot to:
+
+Create a checklist
+Add a welcome section
+Make it more customer-friendly
+Create a one-page version
+16. Product Requirements Document
+
+Create a new blank document.
+
+Open Copilot.
+
+Try:
+
+Create a Product Requirements Document for a customer management application. Include product overview, business problem, objectives, target users, functional requirements, non-functional requirements, user stories, KPIs and future enhancements.
+
+You can then ask Copilot to:
+
+Add acceptance criteria
+Create user stories
+Convert requirements into a table
+Identify missing requirements
+17. Employee Performance Review
+
+Create a new blank document.
+
+Look for Copilot.
+
+Try:
+
+Create a professional employee performance review template. Include employee achievements, key responsibilities, strengths, areas for improvement, goals, training requirements, manager feedback and development plan.
+
+You can then ask Copilot to:
+
+Make it more constructive
+Make the feedback professional
+Add measurable goals
+Create a development plan
+18. Customer Feedback Analysis
+
+Create a new blank document.
+
+Open Copilot.
+
+Try:
+
+Analyze the following customer feedback and create a professional summary. Group the feedback into common themes, identify positive comments, identify areas of concern, summarize recurring issues and provide suggested improvement actions.
+
+You can then ask Copilot to:
+
+Create a table
+Summarize the top issues
+Identify recurring themes
+Create an action plan
+19. Project Status Report

@@ -1,0 +1,238 @@
+
+-----------------------------------------------------------------------------------------------------------------
+https://cuez.app/news/
+https://higgsfield.ai/ai/video?model=seedance_2_5
+https://workflow.ap.org/apenps/
+https://www.chatday.ai/l/logo/01?utm_source=bing&utm_medium=cpc&utm_campaign=524520096&utm_term=logo%20maker%20ai&utm_content=&utm_adgroup=1327113514795901&utm_network=a&utm_device=c&utm_devicemodel=&utm_matchtype=e&utm_loc_physical_ms=143183&msclkid=bca8720bfa7f1db9350018b19a5b6231
+https://autoscript.tv/
+https://cuez.app/integrations/autoscript/
+https://cuez.app/integrations/
+https://cuez.app/integrations/
+https://cuez.app/news/
+https://workflow.ap.org/apenps/
+https://openai.com/index/gpt-6-astra/?utm_source=chatgpt.com
+https://learn.chatgpt.com/docs
+https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6-astra&utm_source=chatgpt.com
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ **Acquire → Manage → Discover → Create → Collaborate → Enrich → Deliver → Protect**
+
+ For your use case, we can adapt that newsroom architecture into a **University / Undergraduate Program Discovery System** where the user can ask:
+
+ - Find undergraduate programs
+- Who is the dean?
+- What are the admission requirements?
+- Tell me about tuition
+- What majors are offered?
+- Find contact information
+
+
+
+---
+
+ # Part 1  PowerPoint Animation Prompts..
+
+
+
+
+
+
+
+ ### Prompt 1 — University Information Journey
+
+ > Create a professional PowerPoint animation showing the journey of a student searching for university information. Use an 8-stage visual workflow inspired by a modern digital newsroom: **Acquire → Manage → Discover → Create → Collaborate → Enrich → Deliver → Protect**. Replace newsroom terminology with university information tasks. Animate a student question entering the system, moving through data collection, verification, program discovery, and finally producing a clear answer. Use dark navy, cyan, electric blue, and white, with glowing connecting lines and modern technology-style icons. Make the animation corporate, cinematic, and suitable for an education technology presentation.
+
+---
+
+ ### Prompt 2 — "Find Undergraduate Programs"
+
+ > Create a PowerPoint animation demonstrating the workflow for the user question **"Find undergraduate programs."** Start with the question appearing on screen. Animate the system searching university websites, catalogs, program databases, and academic departments. Show information being collected, categorized by university, college, degree, major, campus, and delivery mode. Finish with a dynamic dashboard displaying undergraduate programs as organized cards. Use smooth zooms, glowing data paths, search animations, and a futuristic blue newsroom aesthetic.
+
+---
+
+
+---
+
+ ### Prompt 4 — Admission Requirements
+
+ > Create a PowerPoint animation for the question **"What are the admission requirements?"** Show the question entering an intelligent university information platform. Animate the system finding requirements such as academic qualifications, prerequisite subjects, English-language requirements, test scores, documents, deadlines, and application procedures. Organize the results into animated categories. Use icons for documents, certificates, deadlines, and requirements. End with a clear checklist dashboard. Use modern blue/cyan technology visuals and smooth PowerPoint Morph-style transitions.
+
+---
+
+ ### Prompt 5 — Tuition Information
+
+ > Create an animated PowerPoint presentation demonstrating the question **"Tell me about tuition."** Begin with the user's question and animate the system retrieving tuition information. Show tuition being separated into undergraduate tuition, international tuition, domestic tuition, fees, scholarships, housing, and other potential costs. Animate numbers appearing in comparison cards and charts. Include a clear disclaimer that tuition can vary by program, academic year, residency, and other conditions. Use a premium financial-dashboard aesthetic with navy, cyan, white, and subtle green highlights.
+
+---
+
+ ### Prompt 6 — "What Majors Are Offered?"
+
+ > Create a PowerPoint animation showing how a student asks **"What majors are offered?"** Animate the system searching academic catalogs and organizing majors into categories such as Business, Engineering, Computer Science, Arts, Medicine, Education, and Social Sciences. Show the categories expanding into individual majors. Finish with an interactive-looking academic program map. Use animated nodes, connecting lines, icons, and smooth zoom transitions. Visual style should match a futuristic university information newsroom.
+
+---
+Absolutely. Below are **20 updated Microsoft Copilot prompts**—10 for **PowerPoint** and 10 for **Excel**—built around the same university-information workflow, but designed to produce more modern, polished outputs.
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+ > Create a professional PowerPoint animation showing the journey of a student searching for university information. Use an 8-stage visual workflow inspired by a modern digital newsroom: **Acquire → Manage → Discover → Create → Collaborate → Enrich → Deliver → Protect**. Replace newsroom terminology with university information tasks. Animate a student question entering the system, moving through data collection, verification, program discovery, and finally producing a clear answer. Use dark navy, cyan, electric blue, and white, with glowing connecting lines and modern technology-style icons. Make the animation corporate, cinematic, and suitable for an education technology presentation.
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+ ### PowerPoint prompts
+
+ 1. **University Information Command Center**\
+    Create a cinematic PowerPoint animation showing a university information command center. Visualize the workflow **Ask → Search → Collect → Verify → Organize → Analyze → Answer → Cite**. Show student questions flowing into university websites, catalogs, departments, policies, and databases, then converging into a verified answer. Use dark navy, electric blue, cyan, white, glassmorphism cards, animated data streams, and Morph transitions.
+
+--------------------------------------------------------------------------------------------------------------------------------------
+2. **AI University Search Experience**\
+    Create a modern PowerPoint animation demonstrating an AI assistant answering university questions. Start with a student asking multiple questions and animate the AI identifying intent, searching authoritative sources, comparing information, verifying dates, and generating concise answers. Include source cards and confidence/checkmark visuals. Use a premium EdTech aesthetic.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+3. **University Program Discovery**\
+    Create an animated presentation showing how a student discovers degree programs. Animate **University → College → School → Department → Degree → Major → Specialization → Campus → Delivery Mode** as an interactive hierarchy. Use expanding nodes, animated connectors, icons, and smooth zoom transitions.
+
+------------------------------------------------------------------------------------------------------------------------------------------
+4. **University Source Verification**\
+    Create a PowerPoint animation explaining how university information is verified. Show multiple sources such as official university websites, academic catalogs, faculty pages, admissions pages, and policy documents. Animate the system comparing information, detecting conflicts, identifying the authoritative source, and producing a verified answer with citations.
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+5. **Student Question to Answer**\
+    Create a cinematic before-and-after PowerPoint animation. On the left, show a student with a complex question: **“Which undergraduate computer science programs are available, where are they offered, and what are the admission requirements?”** Animate the question being broken into smaller information tasks and finally reconstructed into a structured answer dashboard.
+
+--------------------------------------------------------------------------------------------------------------------------------------
+6. **University Admissions Intelligence**\
+    Create a modern PowerPoint animation showing an AI-powered admissions information workflow. Cover **Programs → Eligibility → Prerequisites → Documents → Tests → Deadlines → Fees → Application Process**. Animate each stage as information is collected and verified. End with a personalized admissions checklist.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+7. **University People & Leadership Search**\
+    Create an animated PowerPoint demonstrating how a student can find university leadership information. Start with **“Who is the Dean of the College of Engineering?”** Show entity identification, university selection, college matching, faculty-page discovery, verification, and final presentation. End with an executive profile card containing name, title, college, department, source, and last-updated date.
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+8. **University Tuition Intelligence Dashboard**\
+    Create a premium PowerPoint animation showing how tuition information is collected and organized. Separate **Domestic → International → Undergraduate → Graduate → Program Fees → Housing → Scholarships → Additional Costs**. Animate figures into comparison cards and charts. Include an on-screen note that fees may vary by academic year, program, residency, and other conditions.
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+9. **University Knowledge Graph**\
+    Create a futuristic PowerPoint animation visualizing a university as a knowledge graph. Connect **Universities, Colleges, Schools, Departments, Programs, Majors, Courses, Faculty, Campuses, Fees, Admissions, and Policies**. Animate a student question lighting up relevant nodes and generating an answer. Use glowing cyan connections on a dark navy background.
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+10. **End-to-End University Information Platform**\
+     Create a 10-stage cinematic PowerPoint animation using: **Ask → Acquire → Manage → Discover → Verify → Connect → Analyze → Create → Deliver → Protect**. Translate each stage into university-information activities. Show the entire journey from a student's question to a verified, cited, easy-to-understand answer. Use a futuristic digital-newsroom aesthetic with Morph, Zoom, glowing paths, glass panels, and subtle particle effects.
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+ ## Excel prompts for Microsoft Copilot
+
+ 11. **University Program Master Database**\
+     Create an Excel workbook that organizes university programs into a structured database. Include columns for **University, Campus, College, School, Department, Degree Level, Degree Name, Major, Specialization, Delivery Mode, Study Duration, Program URL, Source, Last Verified Date, and Notes**. Format it as a professional searchable table with filters and conditional formatting.
+12. **University Program Comparison Dashboard**\
+     Create an Excel dashboard comparing university programs. Include filters for **University, Degree Level, Discipline, Campus, Delivery Mode, Tuition Range, and Duration**. Create KPI cards, charts, comparison tables, and slicer-style controls. Use a professional navy, cyan, white, and blue color scheme.
+13. **Admissions Requirements Tracker**\
+     Build an Excel admissions requirements tracker with columns for **University, Program, Academic Qualification, Prerequisite Subjects, GPA Requirement, English Requirement, Test Requirement, Required Documents, Application Deadline, Application URL, Source, Verification Status, and Last Updated**. Add dropdowns and conditional formatting to highlight missing or outdated information.
+14. **University Tuition Comparison Tool**\
+     Create an Excel tuition comparison workbook for universities. Organize **Domestic Tuition, International Tuition, Application Fee, Program Fee, Housing Cost, Estimated Living Cost, Scholarships, and Total Estimated Annual Cost**. Add formulas that calculate estimated yearly and full-program costs. Create a comparison dashboard with charts.
+15. **University Faculty Directory**\
+     Create an Excel faculty and leadership database with **University, College, Department, Name, Position, Academic Rank, Research Area, Email, Profile URL, Source, Verification Status, and Last Verified Date**. Add filters and conditional formatting so users can quickly identify verified and incomplete records.
+16. **University Source Verification Matrix**\
+     Create an Excel verification matrix for university information. Track each data point against multiple sources, including **Official University Website, Academic Catalog, Department Page, Admissions Page, Policy Document, and Other Source**. Add columns for source URL, publication/update date, verification status, conflict detected, authoritative source, and reviewer notes.
+17. **University Information Freshness Dashboard**\
+     Build an Excel dashboard that tracks when university information was last verified. Categorize records as **Current, Review Soon, Outdated, Missing, or Conflicting** based on the verification date. Use formulas and conditional formatting to automatically flag records requiring review. Include KPI cards showing total records, verified records, outdated records, and missing sources.
+18. **University Application Deadline Tracker**\
+     Create an Excel deadline management dashboard covering universities and programs. Include **University, Program, Intake, Application Opening Date, Application Deadline, Scholarship Deadline, Document Deadline, Decision Date, Application URL, and Status**. Add formulas that calculate days remaining and automatically highlight approaching deadlines.
+19. **University Scholarship Database**\
+     Create an Excel scholarship database containing **University, Scholarship Name, Eligibility, Degree Level, Domestic/International Eligibility, Amount, Tuition Coverage, Living Allowance, Application Deadline, Requirements, URL, Source, and Verification Date**. Create a dashboard that allows users to filter scholarships by university, degree level, eligibility, and deadline.
+20. **University Knowledge Management Workbook**\
+     Create a complete Excel knowledge-management workbook for university information. Include separate sheets for **Universities, Campuses, Colleges, Departments, Programs, Majors, Faculty, Admissions, Tuition, Scholarships, Deadlines, Sources, and Verification Logs**. Add relationships using consistent IDs, Excel Tables, dropdown lists, formulas, conditional formatting, and a summary dashboard. Design the workbook as the data foundation for an AI-powered university information platform.
+
+ ### A useful Copilot instruction to append to any prompt
+
+ For better results, add this to the end of your PowerPoint or Excel prompt:
+
+ > **Use Microsoft 365 Copilot capabilities wherever appropriate. Do not invent university information. Clearly distinguish verified information from missing information. Preserve source URLs and last-verified dates. Use professional corporate formatting, consistent terminology, accessible colors, concise labels, and presentation-ready visuals.**
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+---
+
+ ## Excel Prompt 1 — University Master Database
+
+ > Create an Excel workbook called **University Information Master Database**. Create a sheet called `Universities` with columns for University ID, University Name, Country, City, Campus, University Type, Website, Admissions Website, Main Phone, General Email, International Office, Accreditation, Last Verified Date, Verification Status, and Source URL. Add filters, Excel Tables, conditional formatting, data validation, and a professional navy/cyan dashboard style.
+
+---
+
+ ## Excel Prompt 2 — Undergraduate Programs Database
+
+ > Create an Excel sheet called `Undergraduate Programs` to store undergraduate program information. Include University ID, University Name, College, Faculty, Program ID, Program Name, Degree Type, Major, Study Mode, Campus, Duration, Delivery Method, Language, Intake, Program Website, Application URL, Last Updated, Source URL, and Verification Status. Use Excel Tables, filters, dropdowns, conditional formatting, and unique IDs.
+
+---
+
+ ## Excel Prompt 3 — Major Finder
+
+ > Build an Excel worksheet called `Major Finder` that allows a user to search for undergraduate majors. Create a search box where the user can enter a major such as Computer Science, Business, Engineering, Psychology, or Biology. Return University Name, Program Name, Degree, Campus, Duration, Study Mode, Tuition, Application Deadline, and Program URL. Use modern Excel formulas such as XLOOKUP, FILTER, SORT, UNIQUE, and IFERROR where appropriate.
+
+---
+
+ ## Excel Prompt 4 — Dean / Academic Leadership Database
+
+ > Create an Excel sheet called `Academic Leadership`. Track University, College, Faculty, Department, Dean Name, Dean Title, Appointment Date if available, Official Profile URL, Department URL, Email, Phone, Last Verified Date, Source URL, and Verification Status. Create a searchable lookup area where a user can enter a university or college and retrieve the corresponding dean information.
+
+---
+
+ ## Excel Prompt 5 — Admission Requirements
+
+ > Create a detailed `Admission Requirements` worksheet. Include University, Program, Degree Type, Applicant Type, Academic Qualification, Minimum GPA, Required Subjects, English Requirement, Standardized Test Requirement, Required Documents, Application Deadline, Application Fee, Interview Requirement, Portfolio Requirement, Additional Requirements, Application URL, Source URL, Last Verified Date, and Verification Status. Use dropdown fields and conditional formatting to highlight missing or unverified information.
+
+---
+
+ ## Excel Prompt 6 — Tuition Calculator
+
+ > Create an Excel `Tuition Calculator` that allows users to select University, Program, Student Type, Residency, Academic Year, and Study Load. Retrieve tuition information from the database using XLOOKUP or FILTER. Calculate estimated annual tuition, semester tuition, additional fees, and estimated total cost. Clearly distinguish between published tuition and calculated estimates. Include a source and last-verified date for every displayed figure.
+
+---
+
+ ## Excel Prompt 7 — Contact Information Finder
+
+ > Create a `Contact Finder` worksheet. Provide a search field for University, College, Department, or Office. Return official university name, admissions office, admissions email, admissions phone, department email, department phone, physical address, website, application URL, and international student contact information. Use FILTER/XLOOKUP formulas and create a clean contact-card style output.
+
+---
+
+ ## Excel Prompt 8 — Source & Verification Management
+
+ > Create a `Sources & Verification` worksheet to manage the reliability of university information. Include Source ID, University, Information Category, Source Type, Source URL, Page Title, Date Accessed, Last Verified Date, Expiration/Review Date, Verification Status, Reviewer, Notes, and Conflicting Information Flag. Use conditional formatting to show verified information in green, information requiring review in amber, and expired or conflicting information in red.
+
+---
+
+ ## Excel Prompt 9 — Six-Question Search Engine
+
+ > Build an Excel worksheet called `Student Search`. Create six selectable search categories: **Undergraduate Programs, Dean, Admission Requirements, Tuition, Majors, Contact Information**. Allow the user to enter a university name and select one of the six questions from a dropdown. Use formulas to retrieve the relevant information from the appropriate worksheets. Present the answer in a clean response panel with the source URL and last verified date.
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ ## Excel Prompt 10 — University Comparison Tool
+
+ > Create an Excel `University Comparison` worksheet that allows users to select up to five universities. Compare them across undergraduate programs, majors, tuition, admission requirements, application deadlines, study modes, campus locations, scholarships, contact information, and official websites. Use dropdowns and lookup formulas so changing a university automatically updates the comparison table. Use neutral conditional formatting to highlight available, missing, or unverified information rather than ranking universities.
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+ ## Excel Prompt 11 — Data Quality Dashboard
+
+ > Create an Excel `Data Quality Dashboard` showing the quality and completeness of the university database. Calculate total universities, total undergraduate programs, total majors, verified records, records requiring review, expired records, missing source URLs, missing tuition information, missing admission information, and missing contact information. Create KPI cards, bar charts, donut charts, and a verification-status dashboard. Add filters for university, country, category, and verification status.
+
+---
+
+ ## Excel Prompt 12 — Complete University Intelligence Workbook
+
+ > Create a comprehensive Excel workbook called **University Intelligence & Student Research System** with the following worksheets: `Dashboard`, `Universities`, `Programs`, `Majors`, `Academic Leadership`, `Admission Requirements`, `Tuition`, `Contacts`, `Sources`, `Verification`, `Student Search`, and `University Comparison`. Connect the worksheets using University ID, Program ID, College ID, and Source ID. Use Excel Tables, XLOOKUP, FILTER, SORT, UNIQUE, IFERROR, dropdown menus, conditional formatting, pivot tables, and charts. The Student Search sheet must answer six questions: **Find undergraduate programs; Who is the dean?; What are the admission requirements?; Tell me about tuition; What majors are offered?; Find contact information.** Every answer should display its source and last verified date.
+
+---
